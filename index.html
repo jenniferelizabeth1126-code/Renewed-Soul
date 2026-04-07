@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Renewed Soul — Life Purpose Coaching. Healing trauma, identity restoration, mindset, and entrepreneurship coaching with Jennifer.">
+<title>The Renewed Soul — Life Purpose Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#b5536a;
+  --primary-lt:#faedf0;
+  --primary-mid:#cc7085;
+  --primary-dark:#8a3048;
+  --gold:#c49a4a;
+  --gold-lt:#f7f0e2;
+  --gold-dark:#8a6a28;
+  --slate:#3d5a6e;
+  --slate-lt:#e8f0f5;
+  --slate-mid:#5a7a90;
+  --warm-dark:#2a3a45;
+  --cream:#fdf9f6;
+  --off-white:#faf5f0;
+  --warm-mid:#5a4040;
+  --warm-soft:#8a7070;
+  --ink:#1e1414;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--off-white);color:var(--ink);margin:0;line-height:1.6}
+
+.skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:#fff;padding:8px 16px;text-decoration:none;font-size:14px;z-index:9999;transition:top .2s}
+.skip-link:focus{top:0}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 48px;border-bottom:0.5px solid #d4c4bc;background:rgba(250,245,240,0.97);position:sticky;top:0;z-index:200;backdrop-filter:blur(8px)}
+.nav-logo{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.3px}
+.nav-logo em{color:var(--primary);font-style:italic}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-family:var(--sans);font-size:13px;color:var(--warm-soft);text-decoration:none;letter-spacing:.2px;transition:color .2s}
+.nav-links a:hover{color:var(--primary)}
+.nav-cta{background:var(--primary);color:#fff;font-family:var(--sans);font-size:12px;font-weight:500;padding:9px 20px;border-radius:3px;text-decoration:none;letter-spacing:.4px;transition:background .2s}
+.nav-cta:hover{background:var(--primary-dark)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
+.mobile-menu{display:none;flex-direction:column;background:var(--off-white);border-top:0.5px solid #d4c4bc}
+.mobile-menu a{font-family:var(--sans);font-size:14px;color:var(--ink);text-decoration:none;padding:14px 24px;border-bottom:0.5px solid #ece5e0}
+.mobile-menu .mob-cta{background:var(--primary);color:#fff;text-align:center;margin:16px 24px 20px;border-radius:3px;padding:12px 24px}
+.mobile-menu.open{display:flex}
+
+/* ACCENT BAR */
+.accent-bar{display:flex;height:3px}
+.ab1{flex:3;background:var(--primary-mid)}
+.ab2{flex:2;background:var(--gold)}
+.ab3{flex:3;background:var(--slate-mid)}
+
+/* HERO */
+.hero{background:var(--slate);padding:96px 48px 88px;text-align:center}
+.hero-eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#a8c4d4;margin-bottom:18px}
+.hero h1{font-family:var(--serif);font-size:56px;font-weight:300;line-height:1.18;color:#f5eeea;margin-bottom:18px;max-width:740px;margin-left:auto;margin-right:auto}
+.hero h1 em{color:#e8c4a0;font-style:italic}
+.hero-sub{font-family:var(--sans);font-size:16px;line-height:1.95;color:#b8ccd8;max-width:600px;margin:0 auto 14px}
+.hero-verse{font-family:var(--serif);font-size:15px;font-style:italic;color:#7a9aaa;margin-bottom:36px;letter-spacing:.3px}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--primary);color:#fff;border:none;padding:14px 32px;border-radius:3px;font-family:var(--sans);font-size:14px;font-weight:500;cursor:pointer;letter-spacing:.4px;transition:background .2s;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-ghost{background:transparent;color:#d4e4ee;border:1px solid #6a8ea8;padding:14px 26px;border-radius:3px;font-family:var(--sans);font-size:14px;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-ghost:hover{background:rgba(255,255,255,.07);border-color:#a8c4d4}
+
+/* SECTIONS */
+.sec{padding:72px 48px;background:var(--off-white)}
+.sec-cream{padding:72px 48px;background:var(--cream)}
+.sec-rose{padding:72px 48px;background:var(--primary-lt)}
+.sec-slate{padding:72px 48px;background:var(--slate-lt)}
+.sec-dark{padding:72px 48px;background:var(--warm-dark)}
+.sec-gold{padding:72px 48px;background:var(--gold-lt)}
+.sec-inner{max-width:920px;margin:0 auto}
+.divider{height:0.5px;background:#ddd4cc}
+
+.lbl{font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;display:block}
+.lbl-rose{color:var(--primary)}
+.lbl-gold{color:var(--gold-dark)}
+.lbl-slate{color:var(--slate)}
+.lbl-lt{color:#8ab0c4}
+
+.sec-h{font-family:var(--serif);font-size:40px;font-weight:300;line-height:1.25;color:var(--ink);margin-bottom:14px}
+.sec-h-lt{font-family:var(--serif);font-size:40px;font-weight:300;line-height:1.25;color:#f0e8e0;margin-bottom:14px}
+.sec-b{font-family:var(--sans);font-size:15px;line-height:1.9;color:var(--warm-mid)}
+.sec-b-lt{font-family:var(--sans);font-size:15px;line-height:1.9;color:#90b0c0}
+
+/* ABOUT */
+.about-row{display:flex;gap:32px;align-items:flex-start;margin-top:12px}
+.headshot{width:160px;height:200px;border-radius:4px;background:var(--slate-lt);border:0.5px solid #d4c4bc;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.headshot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.headshot-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center}
+.headshot-placeholder svg{opacity:.35}
+.headshot-placeholder span{font-family:var(--sans);font-size:10px;color:var(--warm-soft);letter-spacing:.5px;text-transform:uppercase;line-height:1.6}
+.about-right h3{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--ink);margin-bottom:10px}
+.about-right p{font-family:var(--sans);font-size:14px;line-height:1.9;color:var(--warm-mid);margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{font-family:var(--sans);font-size:11px;padding:5px 13px;border-radius:2px;letter-spacing:.2px}
+.tag-rose{background:var(--primary-lt);color:var(--primary-dark)}
+.tag-gold{background:var(--gold-lt);color:var(--gold-dark)}
+.tag-slate{background:var(--slate-lt);color:var(--slate)}
+
+/* FOCUS GRID */
+.focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.fc{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;padding:20px}
+.fc-rule{height:2px;width:28px;border-radius:1px;margin-bottom:12px}
+.fc h4{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.fc p{font-family:var(--sans);font-size:12px;line-height:1.7;color:var(--warm-soft)}
+
+/* SERVICES */
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.service{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;padding:22px;display:flex;gap:16px}
+.service-num{font-family:var(--sans);font-size:11px;font-weight:500;color:var(--warm-soft);min-width:22px;padding-top:2px;letter-spacing:.5px}
+.service h4{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.service p{font-family:var(--sans);font-size:13px;line-height:1.75;color:var(--warm-mid)}
+.service-link{display:inline-block;margin-top:12px;font-family:var(--sans);font-size:12px;color:var(--primary);text-decoration:none;border-bottom:0.5px solid var(--primary-mid);padding-bottom:1px;transition:color .2s}
+.service-link:hover{color:var(--primary-dark)}
+.badge{display:inline-block;margin-top:10px;font-family:var(--sans);font-size:10px;padding:4px 12px;border-radius:2px;letter-spacing:.3px}
+.badge-rose{background:var(--primary-lt);color:var(--primary-dark)}
+.badge-slate{background:var(--slate-lt);color:var(--slate)}
+.badge-gold{background:var(--gold-lt);color:var(--gold-dark)}
+
+/* JOURNEY */
+.journey{display:flex;flex-direction:column;margin-top:24px}
+.jstep{display:flex;gap:18px;padding-bottom:28px;position:relative}
+.jline{position:absolute;left:15px;top:30px;bottom:0;width:1px;background:#3a5060}
+.jnum{width:30px;height:30px;border-radius:50%;color:#fff;font-family:var(--sans);font-size:12px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1}
+.jbody h4{font-family:var(--sans);font-size:15px;font-weight:500;color:#f0e8e0;margin-bottom:5px}
+.jbody p{font-family:var(--sans);font-size:13px;color:#8aacbc;line-height:1.75}
+.pullquote{border-left:3px solid var(--gold);padding:20px 26px;margin-top:28px;background:#1e2c38}
+.pullquote p{font-family:var(--serif);font-size:22px;font-style:italic;color:#e8d8c8;line-height:1.6}
+.pullquote cite{font-family:var(--sans);font-size:12px;color:#6a8a9a;margin-top:10px;display:block;font-style:normal;letter-spacing:.5px}
+
+/* SHOP */
+.shop-coming{border-radius:3px;padding:18px 22px;display:flex;align-items:flex-start;gap:14px;margin-bottom:28px}
+.shop-coming.gold-banner{background:var(--gold-lt);border:0.5px solid #d4b870}
+.shop-coming.slate-banner{background:var(--slate-lt);border:0.5px solid #b0c8d8}
+.cs-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:4px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.shop-coming p{font-family:var(--sans);font-size:13px;line-height:1.65}
+.shop-section-title{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink);letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px}
+.shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.shop-card{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;overflow:hidden;position:relative;transition:transform .2s}
+.shop-card:hover{transform:translateY(-2px)}
+.cs-tag{position:absolute;top:8px;right:8px;color:#fff;font-family:var(--sans);font-size:9px;font-weight:500;padding:3px 8px;border-radius:2px;letter-spacing:1px;text-transform:uppercase}
+.shop-thumb{height:80px;display:flex;align-items:center;justify-content:center}
+.shop-body{padding:13px}
+.shop-body h4{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink);margin-bottom:3px}
+.shop-body p{font-family:var(--sans);font-size:11px;line-height:1.6;color:var(--warm-soft)}
+.shop-price{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--primary);font-style:italic;margin-top:7px}
+.notify-row{display:flex;gap:5px;margin-top:10px}
+.notify-row input{flex:1;padding:7px 8px;border:0.5px solid #c8b8a8;border-radius:2px;font-family:var(--sans);font-size:11px;background:var(--cream);color:var(--ink)}
+.notify-row input:focus{outline:2px solid var(--primary)}
+.notify-row button{background:var(--primary);color:#fff;border:none;padding:7px 10px;border-radius:2px;font-family:var(--sans);font-size:10px;cursor:pointer;transition:background .2s;white-space:nowrap}
+.notify-row button:hover{background:var(--primary-dark)}
+
+/* TESTIMONIALS */
+.test-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.test-card{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;padding:22px}
+.stars{color:var(--gold);font-size:13px;letter-spacing:3px;margin-bottom:8px}
+.test-card blockquote{font-family:var(--sans);font-size:13px;font-style:italic;line-height:1.9;color:var(--warm-mid)}
+.test-name{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--primary);margin-top:12px}
+.test-type{font-family:var(--sans);font-size:10px;color:var(--warm-soft);letter-spacing:.5px;text-transform:uppercase;margin-top:3px}
+
+/* INTAKE FORM */
+.form-wrap{max-width:660px;margin:0 auto}
+.form-grid{display:flex;flex-direction:column;gap:13px;margin-top:24px;text-align:left}
+.form-2col{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.form-label{font-family:var(--sans);font-size:12px;color:var(--warm-mid);display:block;margin-bottom:4px;letter-spacing:.2px}
+.form-grid input,
+.form-grid select,
+.form-grid textarea{width:100%;padding:13px 16px;border-radius:3px;border:0.5px solid #c8b8b0;font-family:var(--sans);font-size:14px;background:var(--off-white);color:var(--ink);transition:border-color .2s}
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 2px rgba(181,83,106,.12)}
+.form-grid textarea{min-height:110px;resize:vertical}
+.submit-btn{width:100%;background:var(--primary);color:#fff;border:none;padding:16px;border-radius:3px;font-family:var(--sans);font-size:15px;font-weight:500;cursor:pointer;letter-spacing:.4px;transition:background .2s;margin-top:4px}
+.submit-btn:hover{background:var(--primary-dark)}
+.form-note{font-family:var(--sans);font-size:11px;color:var(--warm-soft);text-align:center;margin-top:12px;line-height:1.7}
+
+/* FOOTER — fully centered */
+footer{background:var(--warm-dark);padding:56px 48px 36px}
+.footer-inner{max-width:920px;margin:0 auto;text-align:center}
+.footer-logo{font-family:var(--serif);font-size:24px;font-weight:300;color:#e8d8cc;letter-spacing:.5px;margin-bottom:10px}
+.footer-logo em{color:var(--primary-mid);font-style:italic}
+.footer-tagline{font-family:var(--sans);font-size:13px;color:#7a9ab0;line-height:1.8;max-width:480px;margin:0 auto 28px}
+.footer-nav{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.footer-nav a{font-family:var(--sans);font-size:13px;color:#7a9ab0;text-decoration:none;transition:color .2s}
+.footer-nav a:hover{color:#d4e8f0}
+.footer-social{display:flex;gap:20px;justify-content:center;margin-bottom:24px}
+.footer-social a{color:#5a7a8a;transition:color .2s;display:flex;align-items:center}
+.footer-social a:hover{color:#d4e8f0}
+.footer-email{margin-bottom:28px}
+.footer-email a{font-family:var(--sans);font-size:14px;color:var(--primary-mid);text-decoration:none}
+.footer-email a:hover{color:#e8a0b0}
+.footer-divider{height:0.5px;background:#334a58;margin-bottom:20px}
+.footer-bottom{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-copy{font-family:var(--sans);font-size:11px;color:#4a6878}
+.footer-legal{display:flex;gap:20px}
+.footer-legal a{font-family:var(--sans);font-size:11px;color:#4a6878;text-decoration:none;transition:color .2s}
+.footer-legal a:hover{color:#7a9ab0}
+
+/* MODALS */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1000;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--off-white);border-radius:4px;max-width:680px;width:100%;max-height:82vh;overflow-y:auto;padding:36px 40px;position:relative}
+.modal h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:16px}
+.modal p,.modal li{font-family:var(--sans);font-size:13px;line-height:1.85;color:var(--warm-mid);margin-bottom:10px}
+.modal h3{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--ink);margin:18px 0 8px}
+.modal ul{padding-left:18px;margin-bottom:10px}
+.modal-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--warm-soft);padding:4px 8px;line-height:1}
+.modal-close:hover{color:var(--ink)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .focus-grid{grid-template-columns:1fr 1fr}
+  .shop-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav{padding:12px 20px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero{padding:60px 24px 56px}
+  .hero h1{font-size:36px}
+  .hero-sub{font-size:14px}
+  .sec,.sec-cream,.sec-rose,.sec-slate,.sec-dark,.sec-gold{padding:52px 24px}
+  .sec-h,.sec-h-lt{font-size:28px}
+  .about-row{flex-direction:column;gap:24px}
+  .headshot{width:100%;max-width:200px}
+  .service-grid{grid-template-columns:1fr}
+  .test-grid{grid-template-columns:1fr}
+  .form-2col{grid-template-columns:1fr}
+  footer{padding:40px 24px 28px}
+  .footer-nav{gap:16px}
+}
+@media(max-width:480px){
+  .hero h1{font-size:30px}
+  .focus-grid{grid-template-columns:1fr}
+  .shop-grid{grid-template-columns:1fr 1fr}
+}
+:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header role="banner">
+<nav class="nav" aria-label="Main navigation">
+  <a href="#top" class="nav-logo">The <em>Renewed</em> Soul</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#shop">Shop</a>
+    <a href="#intake">Contact</a>
+    <a href="https://calendly.com/YOUR-LINK" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+  </div>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#shop" onclick="closeMenu()">Shop</a>
+  <a href="#intake" onclick="closeMenu()">Contact</a>
+  <a href="https://calendly.com/YOUR-LINK" target="_blank" rel="noopener" class="mob-cta" onclick="closeMenu()">Book a Discovery Call</a>
+</div>
+</header>
+
+<div class="accent-bar" aria-hidden="true">
+  <div class="ab1"></div><div class="ab2"></div><div class="ab3"></div>
+</div>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="hero-eyebrow">Life Purpose Coaching</div>
+  <h1 id="hero-h">You're not stuck.<br>You're <em>unexcavated.</em></h1>
+  <p class="hero-sub">The gold inside you has always been there. You've survived trauma, abuse, and cycles that were never yours to carry. Now it's time to heal, rise, and walk fully into who you were always meant to be.</p>
+  <p class="hero-verse">"I speak life into the dark places of your soul."</p>
+  <div class="hero-btns">
+    <a href="https://calendly.com/YOUR-LINK" target="_blank" rel="noopener" class="btn-primary">Book My Discovery Call</a>
+    <a href="#services" class="btn-ghost">Explore Programs &#8594;</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec-cream" id="about" aria-labelledby="about-h">
+  <div class="sec-inner">
+    <span class="lbl lbl-rose">Life purpose coach</span>
+    <h2 class="sec-h" id="about-h">Hi — I'm Jennifer.</h2>
+    <div class="about-row">
+      <div>
+        <div class="headshot" role="img" aria-label="Jennifer — Life Purpose Coach">
+          <!-- TO ADD YOUR PHOTO replace everything inside this div with:
+               <img src="headshot.jpg" alt="Jennifer, Life Purpose Coach" /> -->
+          <div class="headshot-placeholder">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <circle cx="22" cy="16" r="9" stroke="#8a7070" stroke-width="1.5"/>
+              <path d="M4 40c0-9.941 8.059-18 18-18s18 8.059 18 18" stroke="#8a7070" stroke-width="1.5" fill="none"/>
+            </svg>
+            <span>Your photo<br>goes here</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <h3>I've been where you are.</h3>
+        <p>I've walked through trauma, narcissistic abuse, PTSD, and the edge of losing everything — including myself. I know what it feels like to be multi-gifted and completely stuck. To carry wounds no one can see, and to sense a calling inside you but not know how to step into it.</p>
+        <p>My faith anchors everything I do — but this work is for anyone ready to heal and rise, regardless of where you're starting from or what you believe. I found my way through. And I'll walk it with you.</p>
+        <div class="tags">
+          <span class="tag tag-rose">Trauma-informed</span>
+          <span class="tag tag-gold">Identity healing</span>
+          <span class="tag tag-slate">Purpose activation</span>
+          <span class="tag tag-rose">Inner healing</span>
+          <span class="tag tag-gold">Mindset coaching</span>
+          <span class="tag tag-slate">Entrepreneur builder</span>
+          <span class="tag tag-rose">Childhood trauma &amp; abuse</span>
+          <span class="tag tag-slate">Workplace trauma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FOCUS AREAS -->
+<section class="sec" aria-labelledby="focus-h">
+  <div class="sec-inner">
+    <span class="lbl lbl-slate">What I help you heal &amp; build</span>
+    <h2 class="sec-h" id="focus-h" style="font-size:32px">You may be carrying<br>more than one of these.</h2>
+    <p class="sec-b">This work meets you exactly where you are — whether you're in survival mode or standing at the threshold of your purpose wondering why you can't quite step through.</p>
+    <div class="focus-grid">
+      <div class="fc"><div class="fc-rule" style="background:var(--primary)"></div><h4>Trauma &amp; PTSD</h4><p>Childhood trauma and abuse, workplace wounds, relational pain. We heal the root — not just the symptoms — so you can finally move forward.</p></div>
+      <div class="fc"><div class="fc-rule" style="background:var(--primary-mid)"></div><h4>Narcissistic abuse recovery</h4><p>Reclaim your voice, your worth, and your identity after someone tried to rewrite who you are.</p></div>
+      <div class="fc"><div class="fc-rule" style="background:var(--slate)"></div><h4>Identity &amp; inner healing</h4><p>Rediscover who you were before the world — and the people in it — told you who to be.</p></div>
+      <div class="fc"><div class="fc-rule" style="background:var(--gold)"></div><h4>Purpose &amp; calling</h4><p>Multi-gifted but stuck? We excavate your specific gold, build a roadmap, and walk you from potential into active purpose.</p></div>
+      <div class="fc"><div class="fc-rule" style="background:var(--slate-mid)"></div><h4>Mindset &amp; self-sabotage</h4><p>Rewire the thought systems and invisible cycles that have kept you looping in the same place for years.</p></div>
+      <div class="fc"><div class="fc-rule" style="background:var(--gold-dark)"></div><h4>Entrepreneur building</h4><p>Build your vision and your business with intention and a clear roadmap — without abandoning yourself in the process.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section class="sec-rose" id="services" aria-labelledby="services-h">
+  <div class="sec-inner">
+    <span class="lbl lbl-rose">Work with me</span>
+    <h2 class="sec-h" id="services-h">Choose your path to renewal</h2>
+    <p class="sec-b">Every path leads to the same destination: a life that is fully, unapologetically yours. Start wherever you are.</p>
+    <div class="service-grid">
+      <div class="service">
+        <div class="service-num">01</div>
+        <div>
+          <h4>1:1 Signature Coaching</h4>
+          <p>Deep, personalized work built entirely around your story, your wounds, and your purpose. Custom roadmap, weekly sessions, full accountability. This is your most direct path to transformation.</p>
+          <a href="https://YOUR-SALES-PAGE.com" target="_blank" rel="noopener" class="service-link">View program details &#8594;</a>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-num">02</div>
+        <div>
+          <h4>Group Coaching Cohort</h4>
+          <p>An intimate circle doing the deep work together over 8 or 12 weeks. Heal in community. Rise in community. Because you were never meant to carry this alone.</p>
+          <a href="https://YOUR-SALES-PAGE.com" target="_blank" rel="noopener" class="service-link">View cohort details &#8594;</a><br>
+          <span class="badge badge-slate">8 &amp; 12 week cohorts</span>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-num">03</div>
+        <div>
+          <h4>Purpose Roadmapping</h4>
+          <p>A focused, strategic session to map out your calling, gifts, and next steps. Walk away with a clear, actionable roadmap — not just inspiration, but a real plan for what comes next.</p>
+          <a href="https://YOUR-SALES-PAGE.com" target="_blank" rel="noopener" class="service-link">View session details &#8594;</a>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-num">04</div>
+        <div>
+          <h4>Digital Courses &amp; Ebooks</h4>
+          <p>Self-paced transformation resources for identity healing, mindset rewiring, purpose activation, and entrepreneurship. Coming soon — get on the notify list in the shop below.</p>
+          <a href="#shop" class="service-link">Visit the shop &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="sec-dark" aria-labelledby="journey-h">
+  <div class="sec-inner">
+    <span class="lbl lbl-lt">The renewal process</span>
+    <h2 class="sec-h-lt" id="journey-h">Heal. Discover. Rise.</h2>
+    <p class="sec-b-lt" style="margin-bottom:8px">This is not a quick fix. It's a real, proven process — and it works because it starts where most coaching refuses to go.</p>
+    <div class="journey">
+      <div class="jstep">
+        <div class="jline"></div>
+        <div class="jnum" style="background:var(--primary)">1</div>
+        <div class="jbody"><h4>Heal the wounds first</h4><p>We start exactly where you are — trauma, abuse, broken cycles. Nothing is too heavy or too messy. We go there first, with full care and no judgment.</p></div>
+      </div>
+      <div class="jstep">
+        <div class="jline"></div>
+        <div class="jnum" style="background:var(--gold)">2</div>
+        <div class="jbody"><h4>Excavate your gold</h4><p>Your gifts, your calling, your truest identity — we find what's been buried under survival mode and bring it fully, unapologetically into the light.</p></div>
+      </div>
+      <div class="jstep">
+        <div class="jline"></div>
+        <div class="jnum" style="background:var(--slate-mid)">3</div>
+        <div class="jbody"><h4>Build your roadmap</h4><p>A real, actionable plan for your purpose, your business, and your next season — built specifically for your gifts, your values, and your life.</p></div>
+      </div>
+      <div class="jstep">
+        <div class="jline"></div>
+        <div class="jnum" style="background:var(--primary-mid)">4</div>
+        <div class="jbody"><h4>Break the cycles</h4><p>Mindset rewiring, pattern disruption, and accountability that permanently moves the needle — no more circling the same mountain.</p></div>
+      </div>
+      <div class="jstep" style="padding-bottom:0">
+        <div class="jnum" style="background:var(--gold-dark)">5</div>
+        <div class="jbody"><h4>Walk into your destiny</h4><p>Unstuck. Unashamed. Fully yourself. Building the life and impact you were always created for — without selling your soul to get there.</p></div>
+      </div>
+    </div>
+    <div class="pullquote">
+      <p>"I don't just coach you — I find the gold in you and help you pull it out."</p>
+      <cite>— Jennifer, The Renewed Soul</cite>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec-cream" aria-labelledby="test-h">
+  <div class="sec-inner">
+    <span class="lbl lbl-rose">Client transformations</span>
+    <h2 class="sec-h" id="test-h" style="font-size:30px">Real women. Real results.</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"I didn't realize how much my childhood trauma was silently running every area of my life. Once I could see the pattern, I finally had the power to stop it. I stopped self-sabotaging, stopped self-abandoning, and for the first time in my life I am actually choosing myself. That cycle is broken."</blockquote>
+        <div class="test-name">— Simone A.</div>
+        <div class="test-type">1:1 Coaching — 12 weeks</div>
+      </div>
+      <div class="test-card">
+        <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"I left my toxic job, launched my own business, and I wake up with actual purpose now. Jennifer helped me see that I could be successful without it costing me everything. I have finally transitioned into a life that actually feels like mine."</blockquote>
+        <div class="test-name">— Renee T.</div>
+        <div class="test-type">1:1 Coaching — 16 weeks</div>
+      </div>
+      <div class="test-card">
+        <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"I came into the 12-week cohort thinking I needed motivation. I left with a complete business plan, a life roadmap I could actually execute, and a clarity about my purpose I have never had before. I walked out ready to build — not just dream."</blockquote>
+        <div class="test-name">— Danielle F.</div>
+        <div class="test-type">Group Cohort — 12 weeks</div>
+      </div>
+      <div class="test-card">
+        <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The 8-week cohort gave me back myself. I had been in survival mode for so long I forgot what it felt like to just be me. I left lighter, clearer, with a real roadmap — and finally ready to build the life I had been dreaming about."</blockquote>
+        <div class="test-name">— Kezia M.</div>
+        <div class="test-type">Group Cohort — 8 weeks</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTAKE FORM -->
+<section class="sec" id="intake" aria-labelledby="intake-h">
+  <div class="form-wrap">
+    <span class="lbl lbl-rose" style="text-align:center;display:block">Start here</span>
+    <h2 class="sec-h" id="intake-h" style="font-size:36px;text-align:center;font-family:var(--serif)">Your renewal starts with<br>one conversation.</h2>
+    <p class="sec-b" style="text-align:center;margin-top:10px">Fill this out and schedule your clarity call. This is the first step — not a commitment. Just an honest conversation about where you are and where you want to go.</p>
+    <div class="form-grid">
+      <div class="form-2col">
+        <div><label class="form-label" for="fname">First name *</label><input type="text" id="fname" placeholder="First name" required autocomplete="given-name"/></div>
+        <div><label class="form-label" for="lname">Last name *</label><input type="text" id="lname" placeholder="Last name" required autocomplete="family-name"/></div>
+      </div>
+      <div><label class="form-label" for="email">Email address *</label><input type="email" id="email" placeholder="your@email.com" required autocomplete="email"/></div>
+      <div><label class="form-label" for="phone">Phone (optional)</label><input type="tel" id="phone" placeholder="(555) 000-0000" autocomplete="tel"/></div>
+      <div>
+        <label class="form-label" for="how">How did you find The Renewed Soul?</label>
+        <select id="how">
+          <option value="">Select one...</option>
+          <option>Instagram</option><option>Facebook</option><option>TikTok</option>
+          <option>Google search</option><option>Referred by someone</option><option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label class="form-label" for="interest">I'm most interested in... *</label>
+        <select id="interest" required>
+          <option value="">Select one...</option>
+          <option>1:1 Coaching — 8 weeks</option>
+          <option>1:1 Coaching — 12 weeks</option>
+          <option>1:1 Coaching — 16 weeks</option>
+          <option>1:1 Coaching — 24 weeks</option>
+          <option>Group Cohort — 8 weeks</option>
+          <option>Group Cohort — 12 weeks</option>
+          <option>Purpose Roadmapping Session</option>
+          <option>Digital Resource — notify me</option>
+          <option>Not sure — let's talk</option>
+        </select>
+      </div>
+      <div>
+        <label class="form-label" for="focus">My biggest focus right now is... *</label>
+        <select id="focus" required>
+          <option value="">Select one...</option>
+          <option>Healing from trauma or PTSD</option>
+          <option>Childhood trauma &amp; abuse</option>
+          <option>Workplace trauma</option>
+          <option>Narcissistic abuse recovery</option>
+          <option>Identity &amp; inner healing</option>
+          <option>Finding my purpose and calling</option>
+          <option>Mindset &amp; breaking cycles</option>
+          <option>Building my business or brand</option>
+          <option>All of the above — I'm ready</option>
+        </select>
+      </div>
+      <div><label class="form-label" for="story">Tell me where you are right now *</label>
+        <textarea id="story" placeholder="There are no wrong answers here — this is a safe space." required></textarea>
+      </div>
+      <button class="submit-btn" type="button" onclick="handleSubmit(this)">Submit My Intake Form &#8594;</button>
+      <p class="form-note" id="form-note">Your information is completely private and will never be shared. Reach us at <a href="mailto:jennifer@renewedsoul.co" style="color:var(--primary)">jennifer@renewedsoul.co</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="sec-gold" id="shop" aria-labelledby="shop-h">
+  <div class="sec-inner">
+    <span class="lbl lbl-gold">Digital shop</span>
+    <h2 class="sec-h" id="shop-h" style="font-size:32px">Resources for every stage<br>of your journey</h2>
+    <p class="sec-b" style="margin-bottom:28px">All digital products will be available on Stan Store. Enter your email on any title to be first notified at launch and receive founding member pricing.</p>
+
+    <p class="shop-section-title">Ebooks &amp; Guides</p>
+    <div class="shop-coming gold-banner">
+      <div class="cs-dot" style="background:var(--gold)"></div>
+      <p><strong>Coming Soon —</strong> In final development. Be the first notified at launch and receive founding member pricing.</p>
+    </div>
+    <div class="shop-grid" style="margin-bottom:48px">
+      <div class="shop-card">
+        <span class="cs-tag" style="background:var(--gold)">Soon</span>
+        <div class="shop-thumb" style="background:var(--primary-lt)">
+          <span style="font-size:34px" aria-hidden="true">&#129505;</span>
+        </div>
+        <div class="shop-body"><h4>Identity Reclaimed</h4><p>Healing your sense of self after narcissistic abuse</p><div class="shop-price">Coming Soon</div><div class="notify-row"><input type="email" placeholder="Email" aria-label="Notify me: Identity Reclaimed"/><button>Notify</button></div></div>
+      </div>
+      <div class="shop-card">
+        <span class="cs-tag" style="background:var(--gold)">Soon</span>
+        <div class="shop-thumb" style="background:var(--gold-lt)">
+          <span style="font-size:34px" aria-hidden="true">&#129504;</span>
+        </div>
+        <div class="shop-body"><h4>Mindset Reset</h4><p>Rewiring patterns that keep you in the same cycles</p><div class="shop-price">Coming Soon</div><div class="notify-row"><input type="email" placeholder="Email" aria-label="Notify me: Mindset Reset"/><button>Notify</button></div></div>
+      </div>
+      <div class="shop-card">
+        <span class="cs-tag" style="background:var(--gold)">Soon</span>
+        <div class="shop-thumb" style="background:var(--slate-lt)">
+          <span style="font-size:34px" aria-hidden="true">&#10024;</span>
+        </div>
+        <div class="shop-body"><h4>Life Purpose Discovery</h4><p>Uncover your unique calling when you're multi-gifted &amp; stuck</p><div class="shop-price">Coming Soon</div><div class="notify-row"><input type="email" placeholder="Email" aria-label="Notify me: Life Purpose Discovery"/><button>Notify</button></div></div>
+      </div>
+      <div class="shop-card">
+        <span class="cs-tag" style="background:var(--gold)">Soon</span>
+        <div class="shop-thumb" style="background:var(--primary-lt)">
+          <span style="font-size:34px" aria-hidden="true">&#128640;</span>
+        </div>
+        <div class="shop-body"><h4>Entrepreneur Building</h4><p>Launch and grow your business from healed ground, not survival mode</p><div class="shop-price">Coming Soon</div><div class="notify-row"><input type="email" placeholder="Email" aria-label="Notify me: Entrepreneur Building"/><button>Notify</button></div></div>
+      </div>
+    </div>
+
+    <p class="shop-section-title">Digital Courses</p>
+    <div class="shop-coming slate-banner">
+      <div class="cs-dot" style="background:var(--slate)"></div>
+      <p style="color:#2a4a5a"><strong style="color:#1a3040">Coming Soon —</strong> Full courses launch with the cohort program. Join the waitlist for early access and founding member pricing.</p>
+    </div>
+    <div class="shop-grid">
+      <div class="shop-card">
+        <span class="cs-tag" style="background:var(--slate)">Soon</span>
+        <div class="shop-thumb" style="background:var(--slate-lt)">
+          <span style="font-size:34px" aria-hidden="true">&#129517;</span>
+        </div>
+        <div class="shop-body"><h4>Purpose Activated</h4><p>Find your calling when you feel multi-gifted but stuck</p><div class="shop-price">Coming Soon</div><div class="notify-row"><input type="email" placeholder="Email" aria-label="Waitlist: Purpose Activated"/><button style="background:var(--slate)">Waitlist</button></div></div>
+      </div>
+      <div class="shop-card">
+        <span class="cs-tag" style="background:var(--slate)">Soon</span>
+        <div class="shop-thumb" style="background:var(--primary-lt)">
+          <span style="font-size:34px" aria-hidden="true">&#129419;</span>
+        </div>
+        <div class="shop-body"><h4>Trauma to Triumph</h4><p>A guided framework from survival to purposeful living</p><div class="shop-price">Coming Soon</div><div class="notify-row"><input type="email" placeholder="Email" aria-label="Waitlist: Trauma to Triumph"/><button style="background:var(--slate)">Waitlist</button></div></div>
+      </div>
+      <div class="shop-card">
+        <span class="cs-tag" style="background:var(--slate)">Soon</span>
+        <div class="shop-thumb" style="background:var(--gold-lt)">
+          <span style="font-size:34px" aria-hidden="true">&#128188;</span>
+        </div>
+        <div class="shop-body"><h4>Build With Purpose</h4><p>Entrepreneurship strategy without self-abandonment</p><div class="shop-price">Coming Soon</div><div class="notify-row"><input type="email" placeholder="Email" aria-label="Waitlist: Build With Purpose"/><button style="background:var(--slate)">Waitlist</button></div></div>
+      </div>
+      <div class="shop-card">
+        <span class="cs-tag" style="background:var(--slate)">Soon</span>
+        <div class="shop-thumb" style="background:var(--primary-lt)">
+          <span style="font-size:34px" aria-hidden="true">&#128273;</span>
+        </div>
+        <div class="shop-body"><h4>The Identity Blueprint</h4><p>Reclaim &amp; rebuild your identity from the ground up</p><div class="shop-price">Coming Soon</div><div class="notify-row"><input type="email" placeholder="Email" aria-label="Waitlist: The Identity Blueprint"/><button style="background:var(--slate)">Waitlist</button></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER — fully centered -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-logo">The <em>Renewed</em> Soul</div>
+    <p class="footer-tagline">For every person who survived and still wonders what they were made for.<br>You are not done. You are just beginning.</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#shop">Shop</a>
+      <a href="#intake">Contact</a>
+      <a href="https://calendly.com/YOUR-LINK" target="_blank" rel="noopener">Book a Call</a>
+    </nav>
+    <div class="footer-social" aria-label="Social media">
+      <a href="https://instagram.com/renewedsoulcoaching" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://facebook.com/renewedsoulcoaching" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <a href="https://tiktok.com/@renewedsoulcoaching" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+      </a>
+    </div>
+    <div class="footer-email">
+      <a href="mailto:jennifer@renewedsoul.co">jennifer@renewedsoul.co</a>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Renewed Soul Coaching &nbsp;&#183;&nbsp; All rights reserved</div>
+      <div class="footer-legal">
+        <a href="#" onclick="openModal('privacyModal');return false;">Privacy Policy</a>
+        <a href="#" onclick="openModal('termsModal');return false;">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- PRIVACY MODAL -->
+<div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="priv-title" onclick="if(event.target===this)closeModal('privacyModal')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('privacyModal')" aria-label="Close">&#215;</button>
+    <h2 id="priv-title">Privacy Policy</h2>
+    <p><em>Last updated: January 2026</em></p>
+    <h3>Information We Collect</h3>
+    <p>We collect information you voluntarily provide through our intake form, including your name, email, phone number, and any personal information you choose to share.</p>
+    <h3>How We Use Your Information</h3>
+    <ul><li>To respond to your inquiry and schedule discovery calls</li><li>To provide coaching services you have requested</li><li>To send updates about programs and resources you have opted into</li><li>To notify you about digital product launches if you have requested</li></ul>
+    <h3>We Never Sell Your Information</h3>
+    <p>Your personal information is never sold, rented, or shared with third parties for marketing purposes. Period.</p>
+    <h3>Your Rights</h3>
+    <p>You may request access to, correction of, or deletion of your personal information at any time by contacting <a href="mailto:jennifer@renewedsoul.co" style="color:var(--primary)">jennifer@renewedsoul.co</a>.</p>
+  </div>
+</div>
+
+<!-- TERMS MODAL -->
+<div class="modal-overlay" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="terms-title" onclick="if(event.target===this)closeModal('termsModal')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('termsModal')" aria-label="Close">&#215;</button>
+    <h2 id="terms-title">Terms &amp; Conditions</h2>
+    <p><em>Last updated: January 2026</em></p>
+    <h3>Services</h3>
+    <p>The Renewed Soul provides life purpose coaching including 1:1 coaching, group cohorts, roadmapping sessions, and digital resources. Coaching is not therapy, counseling, or medical advice.</p>
+    <h3>Coaching Relationship</h3>
+    <p>Results depend on your active participation and commitment. While we are fully committed to your transformation, we cannot guarantee specific outcomes.</p>
+    <h3>Payments &amp; Refunds</h3>
+    <p>Payment terms are outlined in your individual coaching agreement through HoneyBook. Digital product purchases are final. Cancellation terms are detailed in your signed agreement.</p>
+    <h3>Confidentiality</h3>
+    <p>All information shared in coaching sessions is kept strictly confidential, except where required by law.</p>
+    <h3>Intellectual Property</h3>
+    <p>All content, materials, and digital products created by The Renewed Soul are protected by copyright and may not be reproduced without written permission.</p>
+    <h3>Contact</h3>
+    <p><a href="mailto:jennifer@renewedsoul.co" style="color:var(--primary)">jennifer@renewedsoul.co</a></p>
+  </div>
+</div>
+
+<script>
+function toggleMenu(btn){
+  const m=document.getElementById('mobileMenu');
+  const open=m.classList.toggle('open');
+  btn.setAttribute('aria-expanded',String(open));
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.querySelector('.hamburger').setAttribute('aria-expanded','false');
+}
+function openModal(id){
+  const m=document.getElementById(id);
+  m.classList.add('open');
+  m.querySelector('.modal-close').focus();
+  document.body.style.overflow='hidden';
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(m=>closeModal(m.id));
+});
+function handleSubmit(btn){
+  const required=document.querySelectorAll('[required]');
+  let valid=true;
+  required.forEach(f=>{
+    if(!f.value.trim()){valid=false;f.style.borderColor='var(--primary)'}
+    else f.style.borderColor='';
+  });
+  if(!valid){
+    const n=document.getElementById('form-note');
+    n.textContent='Please fill in all required fields above.';
+    n.style.color='var(--primary)';
+    return;
+  }
+  btn.textContent='Sending...';
+  btn.disabled=true;
+  setTimeout(()=>{
+    btn.innerHTML='&#10003; Submitted — I\'ll be in touch within 48 hours';
+    btn.style.background='#2a5040';
+    const n=document.getElementById('form-note');
+    n.textContent='Thank you. Check your inbox — I\'ll reach out shortly.';
+    n.style.color='var(--gold-dark)';
+  },900);
+}
+</script>
+</body>
+</html>
