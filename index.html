@@ -730,7 +730,8 @@ function handleSubmit(btn){
     n.textContent='Something went wrong. Please try again.';
     n.style.color='var(--primary)';
   });
-function notifySubmit(btn,product){
+  }
+  function notifySubmit(btn,product){
   const row=btn.closest('.notify-row');
   const input=row.querySelector('input');
   const email=input.value.trim();
