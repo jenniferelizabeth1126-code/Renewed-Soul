@@ -715,14 +715,21 @@ function handleSubmit(btn){
   }
   btn.textContent='Sending...';
   btn.disabled=true;
-  setTimeout(()=>{
-    btn.innerHTML='&#10003; Submitted — I\'ll be in touch within 48 hours';
+  const data={fname:document.getElementById('fname').value,lname:document.getElementById('lname').value,email:document.getElementById('email').value,phone:document.getElementById('phone').value,how:document.getElementById('how').value,interest:document.getElementById('interest').value,focus:document.getElementById('focus').value,story:document.getElementById('story').value};
+  fetch('https://formspree.io/f/mlgovblz',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+  .then(r=>r.json()).then(()=>{
+    btn.innerHTML='&#10003; Submitted – I\'ll be in touch within 48 hours';
     btn.style.background='#2a5040';
     const n=document.getElementById('form-note');
-    n.textContent='Thank you. Check your inbox — I\'ll reach out shortly.';
+    n.textContent='Thank you. Check your inbox – I\'ll reach out shortly.';
     n.style.color='var(--gold-dark)';
-  },900);
-}
-</script>
+  }).catch(()=>{
+    btn.textContent='Submit My Intake Form &#8594;';
+    btn.disabled=false;
+    const n=document.getElementById('form-note');
+    n.textContent='Something went wrong. Please try again.';
+    n.style.color='var(--primary)';
+  });
+}</script>
 </body>
 </html>
