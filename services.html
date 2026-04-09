@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Life purpose coaching programs — 1:1 coaching, group cohorts, purpose roadmapping, and digital resources.">
+  <title>Programs & Services — The Renewed Soul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ── EXACT VARIABLES FROM YOUR index.html ── */
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --primary:#b5536a;
+      --primary-lt:#faedf0;
+      --primary-mid:#cc7085;
+      --primary-dark:#8a3048;
+      --gold:#c49a4a;
+      --gold-lt:#f7f0e2;
+      --gold-dark:#8a6a28;
+      --slate:#3d5a6e;
+      --slate-lt:#e8f0f5;
+      --slate-mid:#5a7a90;
+      --warm-dark:#2a3a45;
+      --cream:#fdf9f6;
+      --off-white:#faf5f0;
+      --warm-mid:#5a4040;
+      --warm-soft:#8a7070;
+      --ink:#1e1414;
+      --serif:'Cormorant Garamond',Georgia,serif;
+      --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--off-white);color:var(--ink);margin:0;line-height:1.6}
+
+    /* ── NAV — copied exactly from your index.html ── */
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 48px;border-bottom:0.5px solid #d4c4bc;background:rgba(250,245,240,0.97);position:sticky;top:0;z-index:200;backdrop-filter:blur(8px)}
+    .nav-logo{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.3px}
+    .nav-logo em{color:var(--primary);font-style:italic}
+    .nav-links{display:flex!important;gap:28px;align-items:center}
+    .nav-links a{font-family:var(--sans);font-size:13px;color:var(--warm-soft);text-decoration:none;letter-spacing:.2px;transition:color .2s}
+    .nav-links a:hover{color:var(--primary)}
+    .nav-cta{background:var(--primary);color:#fff;font-family:var(--sans);font-size:12px;font-weight:500;padding:9px 20px;border-radius:3px;text-decoration:none;letter-spacing:.4px;transition:background .2s}
+    .nav-cta:hover{background:var(--primary-dark)}
+    .hamburger{display:none !important;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
+    .mobile-menu{display:none;flex-direction:column;background:var(--off-white);border-top:0.5px solid #d4c4bc}
+    .mobile-menu a{font-family:var(--sans);font-size:14px;color:var(--ink);text-decoration:none;padding:14px 24px;border-bottom:0.5px solid #ece5e0}
+    .mobile-menu .mob-cta{background:var(--primary);color:#fff;text-align:center;margin:16px 24px 20px;padding:12px 24px;border-radius:3px}
+    .mobile-menu.open{display:flex}
+
+    /* ── ACCENT BAR — exact from your site ── */
+    .accent-bar{display:flex;height:3px}
+    .ab1{flex:3;background:var(--primary-mid)}
+    .ab2{flex:2;background:var(--gold)}
+    .ab3{flex:3;background:var(--slate-mid)}
+
+    /* ── HERO — uses your .hero / .sec-slate colors ── */
+    .page-hero{background:var(--slate);padding:96px 48px 88px;text-align:center}
+    .hero-eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#a8c4d4;margin-bottom:18px;display:block}
+    .page-hero h1{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.2rem);font-weight:300;line-height:1.18;color:#f5eeea;margin-bottom:20px;max-width:740px;margin-left:auto;margin-right:auto}
+    .page-hero h1 em{color:#e8c4a0;font-style:italic}
+    .page-hero p{font-family:var(--sans);font-size:16px;line-height:1.95;color:#b0ccd8;max-width:600px;margin:0 auto 14px}
+    .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+    .btn-primary{background:var(--primary);color:#fff;border:none;padding:14px 32px;border-radius:3px;font-family:var(--sans);font-size:14px;font-weight:500;cursor:pointer;letter-spacing:.4px;transition:background .2s;text-decoration:none;display:inline-block}
+    .btn-primary:hover{background:var(--primary-dark)}
+
+    /* ── JUMP BAR ── */
+    .jump-bar{background:#fff;border-bottom:0.5px solid #d4c4bc;overflow-x:auto;scrollbar-width:none}
+    .jump-bar::-webkit-scrollbar{display:none}
+    .jump-bar-inner{max-width:920px;margin:0 auto;padding:0 48px;display:flex;white-space:nowrap}
+    .jump-bar a{font-family:var(--sans);font-size:12px;letter-spacing:.2px;color:var(--warm-soft);text-decoration:none;padding:14px 18px;border-bottom:2px solid transparent;transition:all .2s;display:inline-block}
+    .jump-bar a:hover{color:var(--primary);border-bottom-color:var(--primary)}
+
+    /* ── PAGE BODY ── */
+    .page-body{max-width:920px;margin:0 auto;padding:80px 48px 120px}
+
+    /* ── SECTION BLOCKS ── */
+    .svc-section{margin-bottom:80px;scroll-margin-top:72px}
+    .lbl{font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;display:block;color:var(--primary)}
+    .sec-h{font-family:var(--serif);font-size:40px;font-weight:300;line-height:1.25;color:var(--ink);margin-bottom:14px}
+    .sec-b{font-family:var(--sans);font-size:15px;line-height:1.9;color:var(--warm-mid);padding-bottom:28px;border-bottom:0.5px solid #ddd4cc;margin-bottom:28px;max-width:600px}
+
+    /* ── SERVICE CARDS — matches your .service style ── */
+    .svc-card{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;padding:28px 32px;margin-bottom:14px;transition:box-shadow .2s,transform .2s}
+    .svc-card:hover{box-shadow:0 4px 20px rgba(90,64,64,.08);transform:translateY(-1px)}
+    .card-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:14px}
+    .card-name{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ink);margin-bottom:6px}
+    .card-sub{font-family:var(--sans);font-size:11px;color:var(--warm-soft);letter-spacing:.2px}
+    .card-price{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);white-space:nowrap;flex-shrink:0}
+    .card-body{font-family:var(--sans);font-size:13px;line-height:1.75;color:var(--warm-mid)}
+    .card-body p+p{margin-top:10px}
+    .card-meta{margin-top:14px;padding-top:12px;border-top:0.5px solid #e8ddd8;font-family:var(--sans);font-size:11px;color:var(--warm-soft);letter-spacing:.2px}
+
+    /* ── CTA ROW ── */
+    .sec-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+
+    /* ── PULLQUOTE — matches your .pullquote ── */
+    .pullquote{border-left:3px solid var(--gold);padding:20px 26px;margin:0 0 80px;background:#1e2c38}
+    .pullquote p{font-family:var(--serif);font-size:22px;font-style:italic;color:#e8d8c8;line-height:1.6}
+    .pullquote cite{font-family:var(--sans);font-size:12px;color:#6a8a9a;margin-top:10px;display:block;font-style:normal;letter-spacing:.5px}
+
+    /* ── COMING SOON CARD ── */
+    .coming-card{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;padding:52px 36px;text-align:center}
+    .coming-card .icon{font-size:2.4rem;margin-bottom:16px}
+    .coming-card h3{font-family:var(--serif);font-size:28px;font-weight:400;margin-bottom:12px}
+    .coming-card p{font-family:var(--sans);font-size:13px;color:var(--warm-mid);max-width:420px;margin:0 auto 28px;line-height:1.8}
+
+    /* ── FOOTER — exact from your index.html ── */
+    footer{background:var(--warm-dark);padding:56px 48px 36px}
+    .footer-inner{max-width:920px;margin:0 auto;text-align:center}
+    .footer-logo{font-family:var(--serif);font-size:24px;font-weight:300;color:#e8d8cc;letter-spacing:.5px;margin-bottom:10px;display:block;text-decoration:none}
+    .footer-logo em{color:var(--primary-mid);font-style:italic}
+    .footer-tagline{font-family:var(--sans);font-size:13px;color:#7a9ab0;line-height:1.8;max-width:480px;margin:0 auto 28px}
+    .footer-nav{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+    .footer-nav a{font-family:var(--sans);font-size:13px;color:#7a9ab0;text-decoration:none;transition:color .2s}
+    .footer-nav a:hover{color:var(--primary-mid)}
+    .footer-social{display:flex;gap:16px;justify-content:center;margin-bottom:18px}
+    .footer-social a{width:34px;height:34px;border:1px solid rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#7a9ab0;text-decoration:none;font-size:14px;transition:all .2s}
+    .footer-social a:hover{border-color:var(--primary-mid);color:var(--primary-mid)}
+    .footer-email{display:block;font-family:var(--sans);font-size:13px;color:var(--primary-mid);text-decoration:none;margin-bottom:28px}
+    .footer-copy{font-family:var(--sans);font-size:11px;color:rgba(255,255,255,0.25);border-top:0.5px solid rgba(255,255,255,0.08);padding-top:20px}
+    .footer-copy a{color:rgba(255,255,255,0.3);text-decoration:none;margin:0 6px}
+    .footer-copy a:hover{color:var(--primary-mid)}
+
+    /* ── MOBILE ── */
+    @media(max-width:768px){
+      .nav{padding:14px 20px}
+      .nav-links{display:none!important}
+      .hamburger{display:flex!important}
+      .page-hero{padding:64px 20px 56px}
+      .jump-bar-inner{padding:0 16px}
+      .page-body{padding:52px 20px 80px}
+      .svc-card{padding:22px 20px}
+      .pullquote{margin:0 0 60px}
+      footer{padding:48px 20px 32px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">The <em>Renewed</em> Soul</a>
+  <div class="nav-links">
+    <a href="index.html#about">About</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#shop">Shop</a>
+    <a href="index.html#intake">Contact</a>
+    <a href="https://calendly.com/jennifer-renewedsoul/30min" target="_blank" class="nav-cta">Book a Call</a>
+  </div>
+  <button class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mob">
+  <a href="index.html#about">About</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#shop">Shop</a>
+  <a href="index.html#intake">Contact</a>
+  <a href="https://calendly.com/jennifer-renewedsoul/30min" target="_blank" class="mob-cta">Book a Call</a>
+</div>
+
+<!-- ACCENT BAR -->
+<div class="accent-bar"><div class="ab1"></div><div class="ab2"></div><div class="ab3"></div></div>
+
+<!-- JUMP BAR -->
+<div class="jump-bar">
+  <div class="jump-bar-inner">
+    <a href="#signature">1:1 Coaching</a>
+    <a href="#roadmap">Purpose Roadmapping</a>
+    <a href="#cohort">Group Cohort</a>
+    <a href="#digital">Digital Resources</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <span class="hero-eyebrow">Work with me</span>
+  <h1>Choose your path<br>to <em>renewal</em></h1>
+  <p>Every path leads to the same destination: a life that is fully, unapologetically yours. Start wherever you are.</p>
+  <div class="hero-btns">
+    <a href="https://calendly.com/jennifer-renewedsoul/30min" target="_blank" class="btn-primary">Book My Discovery Call</a>
+  </div>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- 01 · 1:1 SIGNATURE COACHING -->
+  <div class="svc-section" id="signature">
+    <span class="lbl">01 · 1:1 Signature Coaching</span>
+    <h2 class="sec-h">Deep, personalized work.<br>Built entirely around you.</h2>
+    <p class="sec-b">Custom roadmap, weekly sessions, full accountability. Choose the program length that meets you where you are — every option below is a complete transformation path.</p>
+
+    <div class="svc-card">
+      <div class="card-top">
+        <div>
+          <div class="card-name">🧭 Clarity Session</div>
+          <div class="card-sub">1 call · 60 minutes</div>
+        </div>
+        <div class="card-price">$250</div>
+      </div>
+      <div class="card-body">
+        <p>Not sure if coaching is right for you — or where to even begin? This one-time, focused 60-minute session is designed to cut through the noise and give you immediate direction. We'll identify what's keeping you stuck, uncover what you actually want, and map out your clearest next steps.</p>
+        <p>You'll leave with real insight, honest feedback, and a recommendation for what comes next. No fluff. No pressure. Just clarity.</p>
+      </div>
+      <p class="card-meta">Single 60-min video call &nbsp;·&nbsp; Best starting point if you're unsure where to begin</p>
+    </div>
+
+    <div class="svc-card">
+      <div class="card-top">
+        <div>
+          <div class="card-name">🧡 Identity Reset</div>
+          <div class="card-sub">8 weeks</div>
+        </div>
+        <div class="card-price">$1,800</div>
+      </div>
+      <div class="card-body">
+        <p>Eight weeks of focused, intentional work designed to break you out of confusion, misalignment, and the exhausting cycle of not knowing who you are outside of what you do.</p>
+        <p>We'll heal the identity wounds at the root, reconnect you to your values and your voice, and give you a foundation that actually holds. This is where the real reset begins.</p>
+      </div>
+      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available</p>
+    </div>
+
+    <div class="svc-card">
+      <div class="card-top">
+        <div>
+          <div class="card-name">🔑 Inner Alignment</div>
+          <div class="card-sub">12 weeks</div>
+        </div>
+        <div class="card-price">$2,700</div>
+      </div>
+      <div class="card-body">
+        <p>Twelve weeks to bring your identity, your mindset, and your direction into full alignment. This is for the woman who knows something is off — in her relationships, her work, her sense of self — and is ready to do the deep work to fix it. We'll heal what's broken, excavate what's been buried, and build a clear roadmap for the life you actually want.</p>
+        <p>You'll finish this program knowing exactly who you are and where you're going.</p>
+      </div>
+      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available</p>
+    </div>
+
+    <div class="svc-card">
+      <div class="card-top">
+        <div>
+          <div class="card-name">✨ Signature Coaching — Deep Renewal</div>
+          <div class="card-sub">6 months</div>
+        </div>
+        <div class="card-price">$4,800</div>
+      </div>
+      <div class="card-body">
+        <p>Six months of deep, high-touch coaching built entirely around your story, your healing, and your purpose. We go where others won't — into the trauma, the cycles, the identity wounds — and we do the real work of rebuilding from the inside out.</p>
+        <p>You'll leave with a clear sense of who you are, a roadmap for your next chapter, and the mindset to actually walk it out. This is for the woman who is done with surface-level change and ready to fully commit to becoming who she was always created to be.</p>
+      </div>
+      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Most comprehensive path</p>
+    </div>
+
+    <div class="sec-cta">
+      <a href="https://calendly.com/jennifer-renewedsoul/30min" target="_blank" class="btn-primary">Book a Free Discovery Call</a>
+    </div>
+  </div>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <p>"I don't just coach you — I find the gold in you and help you pull it out."</p>
+    <cite>— Jennifer, The Renewed Soul</cite>
+  </div>
+
+  <!-- 02 · PURPOSE ROADMAPPING -->
+  <div class="svc-section" id="roadmap">
+    <span class="lbl">02 · Purpose Roadmapping</span>
+    <h2 class="sec-h">A clear plan for what comes next.</h2>
+    <p class="sec-b">For the woman who has the drive but needs the direction. Walk away with a real, actionable roadmap — not just inspiration.</p>
+
+    <div class="svc-card">
+      <div class="card-top">
+        <div>
+          <div class="card-name">🧠 Purpose Roadmapping Session</div>
+          <div class="card-sub">1 session · 2 hours</div>
+        </div>
+        <div class="card-price">$500</div>
+      </div>
+      <div class="card-body">
+        <p>A focused, strategic 2-hour session designed to bring complete clarity to where you are, what's keeping you stuck, and exactly where you need to go next. We'll map out your gifts, your calling, your obstacles, and your next concrete steps — and you'll leave with a real, written roadmap you can actually follow.</p>
+        <p>This is for the woman who has the drive but needs the direction. No fluff, no generic advice — just a clear, honest plan built specifically for your life and your purpose.</p>
+      </div>
+      <p class="card-meta">Single 2-hour intensive &nbsp;·&nbsp; Written roadmap delivered after session &nbsp;·&nbsp; Session recording included &nbsp;·&nbsp; $500 applies toward any full program</p>
+    </div>
+
+    <div class="sec-cta">
+      <a href="https://calendly.com/jennifer-renewedsoul/30min" target="_blank" class="btn-primary">Book a Free Discovery Call</a>
+    </div>
+  </div>
+
+  <!-- 03 · GROUP COHORT -->
+  <div class="svc-section" id="cohort">
+    <span class="lbl">03 · Group Coaching Cohort</span>
+    <h2 class="sec-h">Heal in community.<br>Rise in community.</h2>
+    <p class="sec-b">Because you were never meant to carry this alone. An intimate circle doing the deep work together.</p>
+
+    <div class="svc-card">
+      <div class="card-top">
+        <div>
+          <div class="card-name">🦋 Group Cohort Healing Program</div>
+          <div class="card-sub">12 weeks · limited spots</div>
+        </div>
+        <div class="card-price">$2,400</div>
+      </div>
+      <div class="card-body">
+        <p>An intimate, high-impact group coaching experience for 12 to 15 women who are ready to heal, grow, and move forward — together. Over 12 weeks you'll do the deep work of identity healing, mindset transformation, and purpose activation inside a safe, supportive community of women who are on the same journey.</p>
+        <p>Because some things heal faster when they're witnessed. Some things rise easier when they're shared. This is not a course. This is a circle.</p>
+      </div>
+      <p class="card-meta">Limited to 12–15 women &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Inquire for next cohort dates</p>
+    </div>
+
+    <div class="sec-cta">
+      <a href="https://calendly.com/jennifer-renewedsoul/30min" target="_blank" class="btn-primary">Book a Free Discovery Call</a>
+    </div>
+  </div>
+
+  <!-- 04 · DIGITAL -->
+  <div class="svc-section" id="digital">
+    <span class="lbl">04 · Digital Courses &amp; Ebooks</span>
+    <h2 class="sec-h">Resources for every stage<br>of your journey.</h2>
+    <p class="sec-b">Self-paced transformation resources for identity healing, mindset rewiring, purpose activation, and entrepreneurship. Coming soon.</p>
+
+    <div class="coming-card">
+      <div class="icon">✨</div>
+      <h3>Coming Soon</h3>
+      <p>Ebooks, guides, and full courses are in final development. Get on the notify list to be first to know and receive founding member pricing.</p>
+      <a href="index.html#shop" class="btn-primary">Visit the Shop &amp; Join Waitlist</a>
+    </div>
+  </div>
+
+</div><!-- /page-body -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">The <em>Renewed</em> Soul</a>
+    <p class="footer-tagline">For every person who survived and still wonders what they were made for.<br>You are not done. You are just beginning.</p>
+    <nav class="footer-nav">
+      <a href="index.html#about">About</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="index.html#intake">Contact</a>
+      <a href="https://calendly.com/jennifer-renewedsoul/30min" target="_blank">Book a Call</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="#" aria-label="TikTok">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+      </a>
+    </div>
+    <a href="mailto:jennifer@renewedsoul.co" class="footer-email">jennifer@renewedsoul.co</a>
+    <p class="footer-copy">
+      © 2026 Renewed Soul Coaching · All rights reserved
+      <a href="index.html#privacy">Privacy Policy</a>
+      <a href="index.html#terms">Terms &amp; Conditions</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
