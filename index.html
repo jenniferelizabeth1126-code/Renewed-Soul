@@ -163,6 +163,17 @@ body{font-family:var(--sans);background:var(--off-white);color:var(--ink);margin
 .yt-btn{display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:#fff;font-family:var(--sans);font-size:14px;font-weight:500;letter-spacing:.4px;padding:12px 22px;border-radius:3px;text-decoration:none;transition:background .2s}
 .yt-btn:hover{background:#cc0000}
 
+  /* WEEKLY WEBINAR */
+.webinar-card{display:grid;grid-template-columns:1fr 1.8fr;gap:28px;background:#fff;border:0.5px solid #d4c8c0;border-radius:6px;padding:36px 32px;margin-top:24px;align-items:center}
+.webinar-when{text-align:center;padding:24px 20px;background:var(--primary);border-radius:6px;color:#fff}
+.webinar-when .lbl{color:rgba(255,255,255,0.75);margin-bottom:14px}
+.webinar-day{font-family:var(--serif);font-size:30px;font-weight:300;line-height:1.1;margin-bottom:8px;color:#fff}
+.webinar-time{font-family:var(--sans);font-size:15px;color:rgba(255,255,255,0.95);font-weight:500;letter-spacing:0.5px}
+.webinar-content h3{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:12px;line-height:1.2}
+.webinar-content p{font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--warm-mid);margin-bottom:14px}
+.webinar-meta{font-family:var(--sans);font-size:13px;color:var(--warm-soft);font-style:italic;letter-spacing:0.2px;margin-bottom:20px !important}
+@media(max-width:768px){.webinar-card{grid-template-columns:1fr;padding:28px 22px;gap:20px}.webinar-day{font-size:26px}}
+
 /* DIGITAL PRODUCTS */
 .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
 .product-card{background:#fff;border:0.5px solid #d4c8c0;border-radius:6px;padding:24px 20px;text-align:center;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s}
@@ -526,7 +537,29 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
   </div>
 </section>
 
-<!-- DIGITAL SHOP -->
+<!-- WEEKLY WEBINAR -->
+<section class="sec-cream" id="webinar" aria-labelledby="webinar-h">
+  <div class="sec-inner">
+    <span class="lbl lbl-rose">Free Weekly Webinar</span>
+    <h2 class="sec-h" id="webinar-h">Join me live,<br>every Tuesday.</h2>
+    <p class="sec-b">A free 60-minute identity reset session, every week. I teach. You ask questions. We do the work together &mdash; limited to 20 women per session so I can actually hear you.</p>
+    <div class="webinar-card">
+      <div class="webinar-when">
+        <span class="lbl" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;display:block">When</span>
+        <p class="webinar-day">Every Tuesday</p>
+        <p class="webinar-time">6:30 PM PDT</p>
+      </div>
+      <div class="webinar-content">
+        <h3>The Identity Reset Webinar</h3>
+        <p>Inside the hour, we look at one of the 7 fractured identities &mdash; what it sounds like, where it came from, and one tool to start dismantling it this week. You'll leave with clarity and an actual practice, not just inspiration.</p>
+        <p class="webinar-meta">Limited to 20 women per session &nbsp;&middot;&nbsp; No replay shared</p>
+        <a href="https://calendly.com/jennifer-renewedsoul/identity-reset-webinar" target="_blank" rel="noopener" class="btn-primary">Register for Next Tuesday &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <!-- DIGITAL SHOP -->
 <section class="sec-gold" id="shop" aria-labelledby="shop-h">
   <div class="sec-inner">
     <span class="lbl lbl-gold">Digital shop</span>
