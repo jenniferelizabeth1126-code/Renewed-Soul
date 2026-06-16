@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Life purpose coaching programs — 1:1 coaching, group cohorts, purpose roadmapping, and digital resources.">
+  <meta name="description" content="Life purpose coaching programs — 1:1 coaching, group cohorts, purpose roadmapping, and digital workbooks.">
   <title>Programs & Services — The Renewed Soul</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
     html{scroll-behavior:smooth}
     body{font-family:var(--sans);background:var(--off-white);color:var(--ink);margin:0;line-height:1.6}
 
-    /* ── NAV — copied exactly from your index.html ── */
+    /* ── NAV ── */
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 48px;border-bottom:0.5px solid #d4c4bc;background:rgba(250,245,240,0.97);position:sticky;top:0;z-index:200;backdrop-filter:blur(8px)}
     .nav-logo{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.3px}
     .nav-logo em{color:var(--primary);font-style:italic}
@@ -49,13 +49,13 @@
     .mobile-menu .mob-cta{background:var(--primary);color:#fff;text-align:center;margin:16px 24px 20px;padding:12px 24px;border-radius:3px}
     .mobile-menu.open{display:flex}
 
-    /* ── ACCENT BAR — exact from your site ── */
+    /* ── ACCENT BAR ── */
     .accent-bar{display:flex;height:3px}
     .ab1{flex:3;background:var(--primary-mid)}
     .ab2{flex:2;background:var(--gold)}
     .ab3{flex:3;background:var(--slate-mid)}
 
-    /* ── HERO — uses your .hero / .sec-slate colors ── */
+    /* ── HERO ── */
     .page-hero{background:var(--slate);padding:96px 48px 88px;text-align:center}
     .hero-eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#a8c4d4;margin-bottom:18px;display:block}
     .page-hero h1{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.2rem);font-weight:300;line-height:1.18;color:#f5eeea;margin-bottom:20px;max-width:740px;margin-left:auto;margin-right:auto}
@@ -81,7 +81,7 @@
     .sec-h{font-family:var(--serif);font-size:40px;font-weight:300;line-height:1.25;color:var(--ink);margin-bottom:14px}
     .sec-b{font-family:var(--sans);font-size:17px;line-height:1.85;color:var(--warm-mid);padding-bottom:28px;border-bottom:0.5px solid #ddd4cc;margin-bottom:28px;max-width:680px}
 
-    /* ── SERVICE CARDS — matches your .service style ── */
+    /* ── SERVICE CARDS ── */
     .svc-card{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;padding:28px 32px;margin-bottom:14px;transition:box-shadow .2s,transform .2s}
     .svc-card:hover{box-shadow:0 4px 20px rgba(90,64,64,.08);transform:translateY(-1px)}
     .card-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:14px}
@@ -95,18 +95,27 @@
     /* ── CTA ROW ── */
     .sec-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
 
-    /* ── PULLQUOTE — matches your .pullquote ── */
+    /* ── PULLQUOTE ── */
     .pullquote{border-left:3px solid var(--gold);padding:20px 26px;margin:0 0 80px;background:#1e2c38}
     .pullquote p{font-family:var(--serif);font-size:22px;font-style:italic;color:#e8d8c8;line-height:1.6}
     .pullquote cite{font-family:var(--sans);font-size:12px;color:#6a8a9a;margin-top:10px;display:block;font-style:normal;letter-spacing:.5px}
 
-    /* ── COMING SOON CARD ── */
-    .coming-card{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;padding:52px 36px;text-align:center}
-    .coming-card .icon{font-size:2.4rem;margin-bottom:16px}
-    .coming-card h3{font-family:var(--serif);font-size:28px;font-weight:400;margin-bottom:12px}
-    .coming-card p{font-family:var(--sans);font-size:13px;color:var(--warm-mid);max-width:420px;margin:0 auto 28px;line-height:1.8}
+    /* ── DIGITAL PRODUCT GRID ── */
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
+    .product-card{background:#fff;border:0.5px solid #d4c8c0;border-radius:6px;padding:28px 22px;text-align:center;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s}
+    .product-card:hover{box-shadow:0 6px 24px rgba(90,64,64,.10);transform:translateY(-2px)}
+    .product-image{width:100%;aspect-ratio:1/1.235;display:flex;align-items:center;justify-content:center;background:var(--primary-lt);border-radius:4px;margin-bottom:22px;overflow:hidden}
+    .product-image img{width:100%;height:100%;object-fit:cover;display:block}
+    .product-tag{font-family:var(--sans);font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--primary);margin-bottom:10px;font-weight:500}
+    .product-name{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:6px}
+    .product-sub{font-family:var(--sans);font-size:12.5px;color:var(--warm-soft);font-style:italic;margin-bottom:14px;line-height:1.5}
+    .product-price{font-family:var(--serif);font-size:34px;font-weight:300;color:var(--primary-dark);margin:6px 0 6px}
+    .product-meta{font-family:var(--sans);font-size:10.5px;color:var(--warm-soft);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+    .product-desc{font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--warm-mid);margin-bottom:22px;flex-grow:1}
+    .product-buy{display:block;background:var(--primary);color:#fff;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.5px;padding:13px 20px;border-radius:4px;text-decoration:none;transition:background .2s;margin-top:auto}
+    .product-buy:hover{background:var(--primary-dark)}
 
-    /* ── FOOTER — exact from your index.html ── */
+    /* ── FOOTER ── */
     footer{background:var(--warm-dark);padding:56px 48px 36px}
     .footer-inner{max-width:920px;margin:0 auto;text-align:center}
     .footer-logo{font-family:var(--serif);font-size:24px;font-weight:300;color:#e8d8cc;letter-spacing:.5px;margin-bottom:10px;display:block;text-decoration:none}
@@ -133,7 +142,11 @@
       .page-body{padding:52px 20px 80px}
       .svc-card{padding:22px 20px}
       .pullquote{margin:0 0 60px}
+      .product-grid{grid-template-columns:1fr;gap:20px}
       footer{padding:48px 20px 32px}
+    }
+    @media(min-width:769px) and (max-width:1024px){
+      .product-grid{grid-template-columns:repeat(2,1fr)}
     }
   </style>
 </head>
@@ -223,10 +236,7 @@
         <p>An 8-week focused coaching experience designed to help you step out of confusion, misalignment, and the exhausting cycle of not knowing who you are outside of what you do or what others expect from you. Through intentional inner work, we address identity wounds at the root, release outdated patterns, and reconnect you to your values, voice, and internal sense of direction. You'll begin to make decisions from clarity instead of survival, overthinking, or self-doubt.</p>
         <p>By the end of this work, you'll have a grounded sense of identity, stronger self-trust, and a clear foundation for how you want to live, lead, and move forward, without second-guessing who you are.</p>
       </div>
-      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available</p>
-      <div style="margin-top:20px;">
-        <a href="https://calendly.com/jennifer-renewedsoul/1-1-coaching" target="_blank" rel="noopener" class="btn-primary" style="font-size:14px;letter-spacing:0.5px;">Book Identity Reset — $1,500 →</a>
-      </div>
+      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Discovery call required to enroll</p>
     </div>
 
     <div class="svc-card">
@@ -241,10 +251,7 @@
         <p>A 12-week deep coaching experience designed to bring your identity, mindset, and direction into full alignment. This is for the woman who knows something feels misaligned, in her relationships, her work, and within herself, and is ready to stop repeating patterns that no longer fit who she's becoming. Together, we go beyond surface-level insight to address the root of what's been holding you back. We uncover what's been buried, heal internal misalignment, and rebuild a clear, grounded sense of direction for your life and decisions.</p>
         <p>By the end of this process, you'll move with clarity, self-trust, and intention knowing who you are, what you're building, and how to move forward without second-guessing yourself.</p>
       </div>
-      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available</p>
-      <div style="margin-top:20px;">
-        <a href="https://calendly.com/jennifer-renewedsoul/1-1-coaching" target="_blank" rel="noopener" class="btn-primary" style="font-size:14px;letter-spacing:0.5px;">Book Inner Alignment — $2,000 →</a>
-      </div>
+      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Discovery call required to enroll</p>
     </div>
 
     <div class="svc-card">
@@ -259,14 +266,11 @@
         <p>A six-month, high-touch coaching container designed around your story, your patterns, and your long-term transformation. This is deep, intentional work that addresses the internal systems shaping your identity, decisions, and direction. We go beneath surface-level change to identify and shift the cycles, beliefs, and identity patterns that have kept you stuck in repetition. From there, we rebuild how you see yourself, how you make decisions, and how you move through life with clarity and intention.</p>
         <p>You'll leave this experience with a grounded sense of identity, a clear and structured roadmap for your next chapter, and the internal capacity to follow through on what you say you want, without self-sabotage or confusion. This is for the woman who is ready for sustained, embodied change—not temporary breakthroughs.</p>
       </div>
-      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Most comprehensive path</p>
-      <div style="margin-top:20px;">
-        <a href="https://calendly.com/jennifer-renewedsoul/1-1-coaching" target="_blank" rel="noopener" class="btn-primary" style="font-size:14px;letter-spacing:0.5px;">Book Deep Renewal — $3,700 →</a>
-      </div>
+      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Most comprehensive path &nbsp;·&nbsp; Discovery call required to enroll</p>
     </div>
 
     <div class="sec-cta">
-      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Not sure which tier? Book a Free Discovery Call →</a>
+      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call →</a>
     </div>
   </div>
 
@@ -295,17 +299,14 @@
         <p>This is for the woman who has vision and drive but needs clear direction and structure. No vague advice—just honest insight and a practical plan tailored to your life, purpose, and capacity.</p>
       </div>
       <p class="card-meta">Single 2-hour intensive &nbsp;·&nbsp; Written roadmap delivered after session &nbsp;·&nbsp; Session recording included &nbsp;·&nbsp; $500 applies toward any full program</p>
-      <div style="margin-top:20px;">
-        <a href="https://calendly.com/jennifer-renewedsoul/1-1-coaching" target="_blank" rel="noopener" class="btn-primary" style="font-size:14px;letter-spacing:0.5px;">Schedule Roadmapping — $500 →</a>
-      </div>
     </div>
 
     <div class="sec-cta">
-      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Not sure yet? Book a Free Discovery Call →</a>
+      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call →</a>
     </div>
   </div>
 
-  <!-- 03 · GROUP COHORT (MOVED TO BOTTOM) -->
+  <!-- 03 · GROUP COHORT -->
   <div class="svc-section" id="cohort">
     <span class="lbl">03 · Group Coaching Cohort</span>
     <h2 class="sec-h">Heal in community.<br>Rise in community.</h2>
@@ -383,18 +384,59 @@
     </section>
   </div>
 
-  <!-- 04 · DIGITAL -->
+  <!-- 04 · DIGITAL WORKBOOKS -->
   <div class="svc-section" id="digital">
-    <span class="lbl">04 · Digital Courses &amp; Ebooks</span>
-    <h2 class="sec-h">Resources for every stage<br>of your journey.</h2>
-    <p class="sec-b">Self-paced transformation resources for identity healing, mindset rewiring, purpose activation, and entrepreneurship. Available now in the shop.</p>
+    <span class="lbl">04 · Digital Workbooks &amp; Journals</span>
+    <h2 class="sec-h">Begin at home, today.</h2>
+    <p class="sec-b">Self-paced identity work for women doing the work on their own time. Each workbook is built on the same framework I use in my coaching — delivered instantly to your inbox.</p>
 
-    <div class="coming-card">
-      <div class="icon">✨</div>
-      <h3>Shop the Workbooks</h3>
-      <p>Break the Cycle Workbook ($20), The 21-Day Journal ($27), and The Unexcavated Woman Guide ($47) — available now. Self-paced. Delivered instantly to your inbox.</p>
-      <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener" class="btn-primary">Shop Workbooks &amp; Courses →</a>
+    <div class="product-grid">
+
+      <!-- Break the Cycle -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="book-break-the-cycle.png" alt="Break the Cycle 7-Day Identity Excavation Workbook">
+        </div>
+        <p class="product-tag">Start Here</p>
+        <h3 class="product-name">Break the Cycle</h3>
+        <p class="product-sub">The 7-Day Identity Excavation Workbook</p>
+        <p class="product-price">$20</p>
+        <p class="product-meta">43 pages · instant digital download</p>
+        <p class="product-desc">Stop living from the false you, in one week. Daily prompts, body check-ins, and declarations to identify what's keeping you stuck and begin breaking the cycle.</p>
+        <a href="https://stan.store/renewedsoul/p/break-the-cycle-workbook-f9pijyvz" target="_blank" rel="noopener" class="product-buy">Buy Now — $20 →</a>
+      </div>
+
+      <!-- 21-Day Journal -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="book-21-day-journal.png" alt="The 21-Day Renewed Soul Journal">
+        </div>
+        <p class="product-tag">Daily Practice</p>
+        <h3 class="product-name">The 21-Day Journal</h3>
+        <p class="product-sub">Three weeks of quiet, daily work</p>
+        <p class="product-price">$27</p>
+        <p class="product-meta">56 pages · instant digital download</p>
+        <p class="product-desc">21 days of guided prompts to reconnect you with your voice, your values, and who you were before the world told you who to be. Built on the 7 fractured identities.</p>
+        <a href="https://stan.store/renewedsoul/p/get-my-21-day-renewed-soul-journal-now" target="_blank" rel="noopener" class="product-buy">Buy Now — $27 →</a>
+      </div>
+
+      <!-- Unexcavated Woman -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="book-unexcavated-woman.png" alt="The Unexcavated Woman, A Self-Guided Identity Reset">
+        </div>
+        <p class="product-tag">The Full Guide</p>
+        <h3 class="product-name">The Unexcavated Woman</h3>
+        <p class="product-sub">A Self-Guided Identity Reset</p>
+        <p class="product-price">$47</p>
+        <p class="product-meta">51 pages · instant digital download</p>
+        <p class="product-desc">All 7 fractured identities. The complete 6-phase framework. Renunciation and replacement library, somatic toolkit, and identity statement. The complete guide to coming home to who you were always made to be.</p>
+        <a href="https://stan.store/renewedsoul/p/identity-reset-workbook-tkueg3rs" target="_blank" rel="noopener" class="product-buy">Buy Now — $47 →</a>
+      </div>
+
     </div>
+
+    <p style="text-align:center;font-family:var(--sans);font-size:13px;color:var(--warm-soft);font-style:italic;margin-top:32px;">Visit my full Stan Store at <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;font-weight:500;">stan.store/renewedsoul</a></p>
   </div>
 
 </div>
