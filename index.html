@@ -775,21 +775,12 @@ document.addEventListener('keydown',e=>{
 });
 </script>
 
-<!-- ASSESSMENT POPUP JS (EmailJS integration) -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- ASSESSMENT POPUP JS (Stan Store redirect) -->
 <script>
 (function(){
-  var PUBLIC_KEY='CiyZjb_2Qjk_G6jF3';
-  var SERVICE_ID='service_5400l8o';
-  var TEMPLATE_ID='template_1v7gzbu';
-  var PDF_LINK='https://drive.google.com/file/d/11N4L3I4JfzGS1agjXfceMRHzCBI1Sfpm/view?usp=sharing';
-  emailjs.init(PUBLIC_KEY);
   var overlay=document.getElementById('rs-ia-overlay');
   var closeBtn=document.getElementById('rs-ia-close');
   var btn=document.getElementById('rs-ia-btn');
-  var formWrap=document.getElementById('rs-ia-form-wrap');
-  var success=document.getElementById('rs-ia-success');
-  var errMsg=document.getElementById('rs-ia-error');
   setTimeout(function(){
     if(sessionStorage.getItem('rs_ia_shown')) return;
     sessionStorage.setItem('rs_ia_shown','1');
@@ -804,29 +795,7 @@ document.addEventListener('keydown',e=>{
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
   btn.addEventListener('click',function(){
-    var name=document.getElementById('rs-ia-name').value.trim();
-    var email=document.getElementById('rs-ia-email').value.trim();
-    errMsg.style.display='none';
-    if(!name){errMsg.textContent='Please enter your first name.';errMsg.style.display='block';return;}
-    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-      errMsg.textContent='Please enter a valid email address.';
-      errMsg.style.display='block';return;
-    }
-    btn.disabled=true;
-    btn.textContent='Sending…';
-    emailjs.send(SERVICE_ID,TEMPLATE_ID,{
-      first_name:name,name:name,email:email,assessment_link:PDF_LINK
-    }).then(function(){
-      formWrap.style.display='none';
-      success.style.display='block';
-      setTimeout(closePopup,4500);
-    },function(err){
-      console.error('EmailJS error:',err);
-      btn.disabled=false;
-      btn.textContent='Send Me My Free Assessment →';
-      errMsg.textContent='Something went wrong. Please try again or email jennifer@renewedsoul.co';
-      errMsg.style.display='block';
-    });
+    setTimeout(closePopup,400);
   });
 })();
 </script>
