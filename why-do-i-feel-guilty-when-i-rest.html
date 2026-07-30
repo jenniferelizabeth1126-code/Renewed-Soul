@@ -149,6 +149,19 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
   .footer-handles{gap:14px}
 }
 :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:2px}
+
+.paths{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:34px;text-align:left;align-items:stretch}
+.pathcard{background:#fff;border:0.5px solid #d4c8c0;border-radius:6px;padding:30px 26px;display:flex;flex-direction:column;height:100%;transition:box-shadow .25s,transform .25s}
+.pathcard:hover{box-shadow:0 6px 26px rgba(90,64,64,.10);transform:translateY(-2px)}
+.pathcard .tag{font-family:var(--sans);font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--primary);margin-bottom:12px;font-weight:500;display:block}
+.pathcard h3{font-family:var(--serif);font-size:25px;font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:10px;min-height:62px}
+.pathcard p{font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--warm-mid);margin-bottom:0}
+.pathcard .fine{font-size:12.5px;color:var(--warm-soft);margin-top:10px;line-height:1.6}
+.pathcard .spacer{flex-grow:1;min-height:18px}
+.pathcard .btn{align-self:flex-start;text-align:center;color:#fff!important;border-bottom:none!important}
+.pathcard .btn:hover{color:#fff!important;background:var(--primary-dark)}
+.cta-sec .cta-wrap{max-width:920px}
+@media(max-width:768px){.paths{grid-template-columns:1fr;gap:18px}.pathcard h3{min-height:0}.pathcard .spacer{min-height:12px}}
 </style>
 </head>
 <body>
@@ -367,7 +380,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
 
     <div class="paths">
 
-      <div class="pcard">
+      <div class="pathcard">
         <span class="tag">Start here, free</span>
         <h3>Trauma Formed Identity Assessment</h3>
         <p>Find out which of the seven identities is actually running you, not the one you assume. About 6 minutes, delivered straight to your inbox.</p>
@@ -376,7 +389,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
         <a href="https://stan.store/renewedsoul/p/my-free-trauma-informedformed-identity-assessment" target="_blank" rel="noopener" class="btn">Take the Free Assessment</a>
       </div>
 
-      <div class="pcard">
+      <div class="pathcard">
         <span class="tag">Do it with me</span>
         <h3>The 12 Week Identity Reset Cohort</h3>
         <p>Begins Thursday, August 6, 2026. Twelve group sessions, two private sessions with me, and a roadmap you actually leave with. Limited to 30 women.</p>
@@ -385,7 +398,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
         <a href="services.html#cohort" class="btn">See the Cohort Details</a>
       </div>
 
-      <div class="pcard">
+      <div class="pathcard">
         <span class="tag">Do it on your own time</span>
         <h3>Workbooks and Journals</h3>
         <p>Break the Cycle, the 7 day excavation workbook, $20. The 21 Day Renewed Soul Journal, $27. The Unexcavated Woman, the full self guided identity reset, $47.</p>
@@ -394,7 +407,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
         <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener" class="btn">Browse the Digital Shop</a>
       </div>
 
-      <div class="pcard">
+      <div class="pathcard">
         <span class="tag">Talk it through first</span>
         <h3>Free Discovery Call</h3>
         <p>Fifteen minutes, no pitch and no commitment. Just an honest conversation about what you are carrying and what would actually help you next.</p>
