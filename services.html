@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Life purpose coaching programs: 1:1 coaching, group cohorts, purpose roadmapping, and digital workbooks.">
-  <title>Programs & Services | The Renewed Soul</title>
+  <title>Programs &amp; Services | The Renewed Soul</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
@@ -64,6 +64,8 @@
     .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
     .btn-primary{background:var(--primary);color:#fff;border:none;padding:14px 32px;border-radius:3px;font-family:var(--sans);font-size:14px;font-weight:500;cursor:pointer;letter-spacing:.4px;transition:background .2s;text-decoration:none;display:inline-block}
     .btn-primary:hover{background:var(--primary-dark)}
+    .btn-outline{background:transparent;color:#d4e4ee;border:1px solid #6a8ea8;padding:14px 26px;border-radius:3px;font-family:var(--sans);font-size:14px;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+    .btn-outline:hover{background:rgba(255,255,255,.07);border-color:#a8c4d4}
 
     /* ── JUMP BAR ── */
     .jump-bar{background:#fff;border-bottom:0.5px solid #d4c4bc;overflow-x:auto;scrollbar-width:none}
@@ -81,13 +83,18 @@
     .sec-h{font-family:var(--serif);font-size:40px;font-weight:300;line-height:1.25;color:var(--ink);margin-bottom:14px}
     .sec-b{font-family:var(--sans);font-size:17px;line-height:1.85;color:var(--warm-mid);padding-bottom:28px;border-bottom:0.5px solid #ddd4cc;margin-bottom:28px;max-width:680px}
 
+    /* ── RATE NOTE ── */
+    .rate-note{background:var(--gold-lt);border-left:3px solid var(--gold);border-radius:3px;padding:16px 20px;margin-bottom:24px;font-family:var(--sans);font-size:14.5px;line-height:1.75;color:var(--warm-mid);max-width:680px}
+    .rate-note strong{color:var(--gold-dark)}
+
     /* ── SERVICE CARDS ── */
     .svc-card{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;padding:28px 32px;margin-bottom:14px;transition:box-shadow .2s,transform .2s}
     .svc-card:hover{box-shadow:0 4px 20px rgba(90,64,64,.08);transform:translateY(-1px)}
     .card-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:14px}
     .card-name{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ink);margin-bottom:6px}
     .card-sub{font-family:var(--sans);font-size:11px;color:var(--warm-soft);letter-spacing:.2px}
-    .card-price{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);white-space:nowrap;flex-shrink:0}
+    .card-price{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);white-space:nowrap;flex-shrink:0;text-align:right}
+    .card-price small{display:block;font-family:var(--sans);font-size:11px;color:var(--warm-soft);letter-spacing:.3px;margin-top:3px;font-weight:400}
     .card-body{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--warm-mid)}
     .card-body p+p{margin-top:10px}
     .card-meta{margin-top:14px;padding-top:12px;border-top:0.5px solid #e8ddd8;font-family:var(--sans);font-size:13px;color:var(--warm-soft);letter-spacing:.2px}
@@ -114,6 +121,11 @@
     .product-desc{font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--warm-mid);margin-bottom:22px;flex-grow:1}
     .product-buy{display:block;background:var(--primary);color:#fff;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.5px;padding:13px 20px;border-radius:4px;text-decoration:none;transition:background .2s;margin-top:auto}
     .product-buy:hover{background:var(--primary-dark)}
+
+    /* ── COHORT SESSION DATES ── */
+    .date-list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 auto 32px;max-width:700px}
+    .date-chip{background:#fff;border:1px solid #E8DDD5;border-radius:6px;padding:10px 16px;font-family:var(--sans);font-size:13px;color:#2A3345}
+    .date-chip span{display:block;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#B5536A;margin-bottom:2px}
 
     /* ── FOOTER ── */
     footer{background:var(--warm-dark);padding:56px 48px 36px}
@@ -160,6 +172,7 @@
     <a href="services.html">Services</a>
     <a href="blog.html">Blog</a>
     <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener">Shop</a>
+    <a href="index.html#contact">Contact</a>
     <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" class="nav-cta">Book a Call</a>
   </div>
   <button class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Menu">
@@ -170,6 +183,7 @@
   <a href="index.html#about">About</a>
   <a href="services.html">Services</a>
   <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener">Shop</a>
+  <a href="index.html#contact">Contact</a>
   <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" class="mob-cta">Book a Call</a>
 </div>
 
@@ -193,6 +207,7 @@
   <p>Every path leads to the same destination: a life that is fully, unapologetically yours. Start wherever you are.</p>
   <div class="hero-btns">
     <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" class="btn-primary">Book My Discovery Call</a>
+    <a href="#cohort" class="btn-outline">Join the Cohort Waitlist &#8594;</a>
   </div>
 </div>
 
@@ -211,7 +226,7 @@
           <div class="card-name">🧭 Clarity Session</div>
           <div class="card-sub">1 call · 60 minutes</div>
         </div>
-        <div class="card-price">$200</div>
+        <div class="card-price">$175</div>
       </div>
       <div class="card-body">
         <p>If you feel stuck, scattered, or unsure of your next move, this session is designed to bring immediate clarity and direction. We cut through confusion, identify what's really keeping you stuck, and define what aligned forward movement looks like for you right now. You'll leave with honest insight, a clear next-step strategy, and guidance on what type of support best fits where you are in your journey, whether that's continued coaching or a more structured path forward.</p>
@@ -219,7 +234,7 @@
       </div>
       <p class="card-meta">Single 60-min video call &nbsp;·&nbsp; Best starting point if you're unsure where to begin</p>
       <div style="margin-top:20px;">
-        <a href="https://calendly.com/jennifer-renewedsoul/1-1-coaching" target="_blank" rel="noopener" class="btn-primary" style="font-size:14px;letter-spacing:0.5px;">Book Clarity Session for $200 →</a>
+        <a href="https://calendly.com/jennifer-renewedsoul/1-1-coaching" target="_blank" rel="noopener" class="btn-primary" style="font-size:14px;letter-spacing:0.5px;">Book Clarity Session for $175 &#8594;</a>
       </div>
     </div>
 
@@ -227,49 +242,49 @@
       <div class="card-top">
         <div>
           <div class="card-name">🧡 Identity Reset</div>
-          <div class="card-sub">8 weeks</div>
+          <div class="card-sub">8 weeks · 8 sessions</div>
         </div>
-        <div class="card-price">$1,500</div>
+        <div class="card-price">$1,297</div>
       </div>
       <div class="card-body">
         <p>An 8-week focused coaching experience designed to help you step out of confusion, misalignment, and the exhausting cycle of not knowing who you are outside of what you do or what others expect from you. Through intentional inner work, we address identity wounds at the root, release outdated patterns, and reconnect you to your values, voice, and internal sense of direction. You'll begin to make decisions from clarity instead of survival, overthinking, or self-doubt.</p>
         <p>By the end of this work, you'll have a grounded sense of identity, stronger self-trust, and a clear foundation for how you want to live, lead, and move forward, without second-guessing who you are.</p>
       </div>
-      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Klarna and Afterpay payment plans available &nbsp;·&nbsp; Discovery call required to enroll</p>
+      <p class="card-meta">8 weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Discovery call required to enroll</p>
     </div>
 
     <div class="svc-card">
       <div class="card-top">
         <div>
           <div class="card-name">🔑 Inner Alignment</div>
-          <div class="card-sub">12 weeks</div>
+          <div class="card-sub">12 weeks · 12 sessions</div>
         </div>
-        <div class="card-price">$2,000</div>
+        <div class="card-price">$1,897</div>
       </div>
       <div class="card-body">
         <p>A 12-week deep coaching experience designed to bring your identity, mindset, and direction into full alignment. This is for the woman who knows something feels misaligned, in her relationships, her work, and within herself, and is ready to stop repeating patterns that no longer fit who she's becoming. Together, we go beyond surface-level insight to address the root of what's been holding you back. We uncover what's been buried, heal internal misalignment, and rebuild a clear, grounded sense of direction for your life and decisions.</p>
         <p>By the end of this process, you'll move with clarity, self-trust, and intention knowing who you are, what you're building, and how to move forward without second-guessing yourself.</p>
       </div>
-      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Klarna and Afterpay payment plans available &nbsp;·&nbsp; Discovery call required to enroll</p>
+      <p class="card-meta">12 weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Discovery call required to enroll</p>
     </div>
 
     <div class="svc-card">
       <div class="card-top">
         <div>
           <div class="card-name">✨ Signature Coaching: Deep Renewal</div>
-          <div class="card-sub">6 months</div>
+          <div class="card-sub">6 months · 24 sessions</div>
         </div>
-        <div class="card-price">$3,700</div>
+        <div class="card-price">$3,497</div>
       </div>
       <div class="card-body">
         <p>A six-month, high-touch coaching container designed around your story, your patterns, and your long-term transformation. This is deep, intentional work that addresses the internal systems shaping your identity, decisions, and direction. We go beneath surface-level change to identify and shift the cycles, beliefs, and identity patterns that have kept you stuck in repetition. From there, we rebuild how you see yourself, how you make decisions, and how you move through life with clarity and intention.</p>
         <p>You'll leave this experience with a grounded sense of identity, a clear and structured roadmap for your next chapter, and the internal capacity to follow through on what you say you want, without self-sabotage or confusion. This is for the woman who is ready for sustained, embodied change, not temporary breakthroughs.</p>
       </div>
-      <p class="card-meta">Weekly 1:1 sessions &nbsp;·&nbsp; Klarna and Afterpay payment plans available &nbsp;·&nbsp; Most comprehensive path &nbsp;·&nbsp; Discovery call required to enroll</p>
+      <p class="card-meta">24 weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Most comprehensive path &nbsp;·&nbsp; Discovery call required to enroll</p>
     </div>
 
     <div class="sec-cta">
-      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call →</a>
+      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call &#8594;</a>
     </div>
   </div>
 
@@ -291,17 +306,20 @@
           <div class="card-name">🧠 Purpose Roadmapping Session</div>
           <div class="card-sub">1 session · 2 hours</div>
         </div>
-        <div class="card-price">$500</div>
+        <div class="card-price">$450<small>2 hours plus your written plan</small></div>
       </div>
       <div class="card-body">
         <p>A focused, high-impact 2-hour session designed to bring clarity to where you are, what's keeping you stuck, and the most aligned path forward. We map your strengths, patterns, goals, and internal blocks to uncover a clear direction for your next season. You'll leave with a structured, written roadmap outlining your direction, priorities, and next steps, so you can stop overthinking and start executing with clarity and confidence.</p>
         <p>This is for the woman who has vision and drive but needs clear direction and structure. No vague advice, just honest insight and a practical plan tailored to your life, purpose, and capacity.</p>
       </div>
-      <p class="card-meta">Single 2-hour intensive &nbsp;·&nbsp; Written roadmap delivered after session &nbsp;·&nbsp; Session recording included</p>
+      <p class="card-meta">Single 2-hour intensive &nbsp;·&nbsp; Written roadmap delivered after the session &nbsp;·&nbsp; Session recording included</p>
+      <div style="margin-top:20px;">
+        <a href="index.html#contact" class="btn-primary" style="font-size:14px;letter-spacing:0.5px;">Request a Roadmapping Session &#8594;</a>
+      </div>
     </div>
 
     <div class="sec-cta">
-      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call →</a>
+      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call &#8594;</a>
     </div>
   </div>
 
@@ -309,81 +327,87 @@
   <div class="svc-section" id="cohort">
     <span class="lbl">03 · Group Coaching Cohort</span>
     <h2 class="sec-h">Heal in community.<br>Rise in community.</h2>
-    <p class="sec-b">Because you were never meant to carry this alone. An intimate circle doing the deep work together.</p>
+    <p class="sec-b">Because you were never meant to carry this alone. An intimate circle doing the deep work together, five Tuesdays this fall.</p>
 
     <div class="svc-card">
       <div class="card-top">
         <div>
-          <div class="card-name">🦋 Group Cohort Identity Healing Program</div>
-          <div class="card-sub">12 weeks · limited spots</div>
+          <div class="card-name">🦋 The Identity Reset Fast Track</div>
+          <div class="card-sub">5 weeks · Tuesday, Sept 29th to Tuesday, Oct 27th, 2026 · limited spots</div>
         </div>
-        <div class="card-price"><span style="font-size:0.85em;color:#8a7070;text-decoration:line-through;font-weight:400;">$1,597</span><br>$1,297</div>
+        <div class="card-price">$397<small>paid in full</small></div>
       </div>
       <div class="card-body">
-        <p>A structured 12-week transformation experience for women ready to do deep inner work in a supported group setting. This program blends identity healing, mindset rewiring, and purpose clarity inside an intimate circle of 25-30 women committed to real change.</p>
-        <p>You'll meet weekly for 90-minute guided group coaching sessions, along with two private 1:1 sessions: an intake session to establish clarity and focus, and a final roadmap session to integrate your progress and define your next steps forward.</p>
-        <p>Throughout the 12 weeks, you'll move through guided transformation work designed to shift patterns, strengthen self-awareness, and create clear direction for your life and decisions.</p>
-        <p>This is not passive learning. It is active transformation in a shared, accountable space.</p>
+        <p>This is the fast track version of my Identity Reset work. The same framework I teach over twelve weeks, condensed into five focused Tuesdays for women who want to start moving now instead of waiting on a longer program.</p>
+        <p>We meet every Tuesday evening for 90 minutes of guided group coaching. Each week takes on one of the fractured identities: where it came from, how it still runs your decisions, and the specific work to dismantle it. You'll leave each session with something to practice, not just something to think about.</p>
+        <p>This is not passive learning. It is active transformation in a shared, accountable space, and five weeks is long enough to shift something real without asking you to commit half a year before you know it works.</p>
       </div>
-      <p class="card-meta">$1,297 if paid in full today, a savings of $300 &nbsp;·&nbsp; Klarna and Afterpay payment plans available &nbsp;·&nbsp; Limited to 25-30 women &nbsp;·&nbsp; Begins August 6, 2026</p>
+      <p class="card-meta">$397 paid in full, or 3 payments of $199 &nbsp;·&nbsp; Limited spots &nbsp;·&nbsp; Waitlist opens first</p>
     </div>
 
     <!-- ENROLLMENT SECTION -->
     <section style="background:#FAF5F0;padding:80px 24px;text-align:center;margin-top:20px;border-radius:4px;">
       <div style="max-width:860px;margin:0 auto;">
-        <p style="font-family:sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#B5536A;margin:0 0 12px;">Now enrolling, spots going fast</p>
-        <h2 style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;line-height:1.15;margin:0 0 8px;">Identity Reset<br><em style="color:#C49A4A;">Group Coaching Cohort</em></h2>
-        <p style="font-family:sans-serif;font-size:15px;color:#5A7080;line-height:1.7;margin:0 auto 32px;max-width:560px;">12 weeks of deep, guided work for women ready to come home to themselves. Before you launch the business, leave the job, or step into the next chapter. This is where we start. Identity first. Then everything opens up.</p>
-        <div style="background:#B5536A;border-radius:8px;padding:12px 24px;margin:0 auto 32px;display:inline-block;">
-          <p style="font-family:sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#F5D5DC;margin:0 0 2px;">Cohort begins</p>
-          <strong style="font-family:Georgia,serif;font-size:22px;font-weight:400;color:#fff;">Thursday, August 6, 2026</strong>
+        <p style="font-family:sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#B5536A;margin:0 0 12px;">Waitlist now open</p>
+        <h2 style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;line-height:1.15;margin:0 0 8px;">Identity Reset<br><em style="color:#C49A4A;">Fast Track Cohort</em></h2>
+        <p style="font-family:sans-serif;font-size:15px;color:#5A7080;line-height:1.7;margin:0 auto 32px;max-width:560px;">Five weeks of deep, guided work for women ready to come home to themselves. Before you launch the business, leave the job, or step into the next chapter. This is where we start. Identity first. Then everything opens up.</p>
+
+        <div style="background:#B5536A;border-radius:8px;padding:14px 28px;margin:0 auto 28px;display:inline-block;">
+          <p style="font-family:sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#F5D5DC;margin:0 0 2px;">Cohort runs</p>
+          <strong style="font-family:Georgia,serif;font-size:22px;font-weight:400;color:#fff;">Tuesday, September 29th to Tuesday, October 27th, 2026</strong>
         </div>
+
+        <div class="date-list">
+          <div class="date-chip"><span>Week 1</span>Tue, Sept 29th</div>
+          <div class="date-chip"><span>Week 2</span>Tue, Oct 6th</div>
+          <div class="date-chip"><span>Week 3</span>Tue, Oct 13th</div>
+          <div class="date-chip"><span>Week 4</span>Tue, Oct 20th</div>
+          <div class="date-chip"><span>Week 5</span>Tue, Oct 27th</div>
+        </div>
+
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">
           <div style="background:#fff;border-radius:10px;border:1px solid #E8DDD5;padding:20px 16px;text-align:center;">
-            <span style="font-family:sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B5536A;">12 Group Sessions</span>
-            <p style="font-family:Georgia,serif;font-size:15px;color:#2A3345;margin:8px 0 0;line-height:1.4;">Weekly coaching with Jennifer and your cohort</p>
+            <span style="font-family:sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B5536A;">5 Group Sessions</span>
+            <p style="font-family:Georgia,serif;font-size:15px;color:#2A3345;margin:8px 0 0;line-height:1.4;">90 minutes every Tuesday with Jennifer and your cohort</p>
           </div>
           <div style="background:#fff;border-radius:10px;border:1px solid #E8DDD5;padding:20px 16px;text-align:center;">
-            <span style="font-family:sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B5536A;">2 Private Sessions</span>
-            <p style="font-family:Georgia,serif;font-size:15px;color:#2A3345;margin:8px 0 0;line-height:1.4;">One-on-one time with Jennifer just for you</p>
+            <span style="font-family:sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B5536A;">Weekly Practice</span>
+            <p style="font-family:Georgia,serif;font-size:15px;color:#2A3345;margin:8px 0 0;line-height:1.4;">Real tools to work between sessions, not just notes</p>
           </div>
           <div style="background:#fff;border-radius:10px;border:1px solid #E8DDD5;padding:20px 16px;text-align:center;">
-            <span style="font-family:sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B5536A;">30 Women</span>
-            <p style="font-family:Georgia,serif;font-size:15px;color:#2A3345;margin:8px 0 0;line-height:1.4;">Sacred, intimate community doing the work together</p>
+            <span style="font-family:sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B5536A;">Small Circle</span>
+            <p style="font-family:Georgia,serif;font-size:15px;color:#2A3345;margin:8px 0 0;line-height:1.4;">Kept intentionally small so every woman is actually heard</p>
           </div>
         </div>
-        <div style="background:#3D5A6E;border-radius:8px;padding:12px 24px;margin:0 auto 40px;display:inline-block;">
-          <span style="font-family:sans-serif;font-size:13px;color:#E8F0F5;">Only </span>
-          <span style="font-family:Georgia,serif;font-size:20px;color:#C49A4A;">30 spots </span>
-          <span style="font-family:sans-serif;font-size:13px;color:#E8F0F5;">available in this cohort</span>
-        </div>
-        <h3 style="font-family:Georgia,serif;font-size:26px;font-weight:300;color:#2A3345;margin:0 0 8px;">Choose your enrollment option</h3>
-        <p style="font-family:sans-serif;font-size:14px;color:#5A7080;margin:0 auto 24px;max-width:560px;line-height:1.6;">Pay in full today and it's <strong style="color:#B5536A;">$1,297 instead of $1,597</strong>, a savings of $300. Payment plans are available and interest free. <strong>Klarna and Afterpay are accepted on every option.</strong></p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:760px;margin:0 auto 40px;">
+
+        <h3 style="font-family:Georgia,serif;font-size:26px;font-weight:300;color:#2A3345;margin:0 0 8px;">Two ways to join</h3>
+        <p style="font-family:sans-serif;font-size:14px;color:#5A7080;margin:0 auto 24px;max-width:560px;line-height:1.6;">Pay in full and it's <strong style="color:#B5536A;">$397</strong>, or split it into three interest free payments.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:560px;margin:0 auto 36px;">
           <div style="background:#fff;border-radius:10px;border:2px solid #B5536A;padding:28px 20px;text-align:center;">
             <p style="font-family:sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#B5536A;margin:0 0 8px;">Pay in full, best value</p>
-            <p style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;margin:0;line-height:1;">$1,297</p>
-            <p style="font-family:sans-serif;font-size:12px;color:#888;margin:6px 0 2px;">One payment. Original price <s>$1,597</s></p>
-            <p style="font-family:sans-serif;font-size:12px;color:#B5536A;font-weight:600;margin:0 0 2px;">You save $300</p>
-            <p style="font-family:sans-serif;font-size:11px;color:#888;margin:0 0 16px;">Klarna and Afterpay available at checkout</p>
-            <a href="https://buy.stripe.com/9B69AMckx0Yc3rU3TafQI0a" target="_blank" rel="noopener" style="display:block;padding:12px;border-radius:6px;background:#B5536A;color:#fff;font-family:sans-serif;font-size:13px;font-weight:500;text-decoration:none;">Enroll Now</a>
-          </div>
-          <div style="background:#fff;border-radius:10px;border:1.5px solid #E8DDD5;padding:28px 20px;text-align:center;">
-            <p style="font-family:sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#3D5A6E;margin:0 0 8px;">2 payments</p>
-            <p style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;margin:0;line-height:1;">$799</p>
-            <p style="font-family:sans-serif;font-size:12px;color:#888;margin:6px 0 2px;">Charged monthly. Two payments of $799 totaling $1,598</p>
-            <p style="font-family:sans-serif;font-size:11px;color:#888;margin:0 0 16px;">Klarna and Afterpay available at checkout</p>
-            <a href="https://buy.stripe.com/bJe7sE1FTbCQ1jMgFWfQI05" target="_blank" rel="noopener" style="display:block;padding:12px;border-radius:6px;background:#3D5A6E;color:#fff;font-family:sans-serif;font-size:13px;font-weight:500;text-decoration:none;">Enroll Now</a>
+            <p style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;margin:0;line-height:1;">$397</p>
+            <p style="font-family:sans-serif;font-size:12px;color:#888;margin:6px 0 2px;">One payment for the full five weeks</p>
+            <p style="font-family:sans-serif;font-size:12px;color:#B5536A;font-weight:600;margin:0 0 16px;">You save $200</p>
           </div>
           <div style="background:#fff;border-radius:10px;border:1.5px solid #E8DDD5;padding:28px 20px;text-align:center;">
             <p style="font-family:sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#3D5A6E;margin:0 0 8px;">3 payments</p>
-            <p style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;margin:0;line-height:1;">$533</p>
-            <p style="font-family:sans-serif;font-size:12px;color:#888;margin:6px 0 2px;">Charged every 4 weeks. Three payments of $533 totaling $1,599</p>
-            <p style="font-family:sans-serif;font-size:11px;color:#888;margin:0 0 16px;">Klarna and Afterpay available at checkout</p>
-            <a href="https://buy.stripe.com/8x23co1FTdKY5A2cpGfQI07" target="_blank" rel="noopener" style="display:block;padding:12px;border-radius:6px;background:#3D5A6E;color:#fff;font-family:sans-serif;font-size:13px;font-weight:500;text-decoration:none;">Enroll Now</a>
+            <p style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;margin:0;line-height:1;">$199</p>
+            <p style="font-family:sans-serif;font-size:12px;color:#888;margin:6px 0 2px;">Three payments of $199, totaling $597</p>
+            <p style="font-family:sans-serif;font-size:11px;color:#888;margin:0 0 16px;">Interest free</p>
           </div>
         </div>
-        <p style="font-family:sans-serif;font-size:12px;color:#AAA;font-style:italic;">"You're not stuck. You're unexcavated." The Renewed Soul</p>
+
+        <!--
+          NOTE FOR JENNIFER: the waitlist button below emails you directly.
+          When you are ready to take payments, create two Stripe links ($397 one time, $199 x 3)
+          and swap them into the two pricing cards above as "Enroll Now" buttons.
+        -->
+        <a href="mailto:jennifer@renewedsoul.co?subject=Join%20the%20Waitlist%3A%20Identity%20Reset%20Fast%20Track%20(Sept%2029th%20to%20Oct%2027th)&body=Hi%20Jennifer%2C%0A%0AI%20would%20like%20to%20join%20the%20waitlist%20for%20the%20Identity%20Reset%20Fast%20Track%20cohort%20starting%20Tuesday%2C%20September%2029th%2C%202026.%0A%0AName%3A%20%0AEmail%3A%20%0APhone%3A%20%0A%0AWhat%20I%20am%20hoping%20to%20work%20on%3A%0A%0A"
+           style="display:inline-block;padding:18px 42px;border-radius:6px;background:#B5536A;color:#fff;font-family:sans-serif;font-size:16px;font-weight:500;letter-spacing:0.5px;text-decoration:none;">Join the Waitlist &#8594;</a>
+        <p style="font-family:sans-serif;font-size:13px;color:#5A7080;margin:16px auto 0;max-width:480px;line-height:1.7;">This opens an email to me with everything filled in. Send it and I'll hold your place, then email you the enrollment link before spots open publicly.</p>
+
+        <p style="font-family:sans-serif;font-size:12px;color:#AAA;font-style:italic;margin-top:32px;">"You're not stuck. You're unexcavated." The Renewed Soul</p>
       </div>
     </section>
   </div>
@@ -407,7 +431,7 @@
         <p class="product-price">$20</p>
         <p class="product-meta">43 pages · instant digital download</p>
         <p class="product-desc">Stop living from the false you, in one week. Daily prompts, body check-ins, and declarations to identify what's keeping you stuck and begin breaking the cycle.</p>
-        <a href="https://stan.store/renewedsoul/p/break-the-cycle-workbook-f9pijyvz" target="_blank" rel="noopener" class="product-buy">Buy Now for $20 →</a>
+        <a href="https://stan.store/renewedsoul/p/break-the-cycle-workbook-f9pijyvz" target="_blank" rel="noopener" class="product-buy">Buy Now for $20 &#8594;</a>
       </div>
 
       <!-- 21-Day Journal -->
@@ -421,7 +445,7 @@
         <p class="product-price">$27</p>
         <p class="product-meta">56 pages · instant digital download</p>
         <p class="product-desc">21 days of guided prompts to reconnect you with your voice, your values, and who you were before the world told you who to be. Built on the 7 fractured identities.</p>
-        <a href="https://stan.store/renewedsoul/p/get-my-21-day-renewed-soul-journal-now" target="_blank" rel="noopener" class="product-buy">Buy Now for $27 →</a>
+        <a href="https://stan.store/renewedsoul/p/get-my-21-day-renewed-soul-journal-now" target="_blank" rel="noopener" class="product-buy">Buy Now for $27 &#8594;</a>
       </div>
 
       <!-- Unexcavated Woman -->
@@ -435,7 +459,7 @@
         <p class="product-price">$47</p>
         <p class="product-meta">51 pages · instant digital download</p>
         <p class="product-desc">All 7 fractured identities. The complete 6-phase framework. Renunciation and replacement library, somatic toolkit, and identity statement. The complete guide to coming home to who you were always made to be.</p>
-        <a href="https://stan.store/renewedsoul/p/identity-reset-workbook-tkueg3rs" target="_blank" rel="noopener" class="product-buy">Buy Now for $47 →</a>
+        <a href="https://stan.store/renewedsoul/p/identity-reset-workbook-tkueg3rs" target="_blank" rel="noopener" class="product-buy">Buy Now for $47 &#8594;</a>
       </div>
 
     </div>
@@ -456,6 +480,7 @@
       <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener">Shop</a>
       <a href="index.html#teaching">Teaching</a>
       <a href="faq.html">FAQ</a>
+      <a href="index.html#contact">Contact</a>
       <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank">Book a Call</a>
     </nav>
     <div class="footer-social">

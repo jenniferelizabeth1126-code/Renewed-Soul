@@ -132,6 +132,7 @@ body{font-family:var(--sans);background:var(--off-white);color:var(--ink);margin
 .badge-rose{background:var(--primary-lt);color:var(--primary-dark)}
 .badge-slate{background:var(--slate-lt);color:var(--slate)}
 .badge-gold{background:var(--gold-lt);color:var(--gold-dark)}
+.cohort-dates{display:inline-block;background:var(--primary);color:#fff;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.3px;padding:7px 14px;border-radius:3px;margin-bottom:10px}
 
 /* JOURNEY */
 .journey{display:flex;flex-direction:column;margin-top:24px}
@@ -189,7 +190,7 @@ body{font-family:var(--sans);background:var(--off-white);color:var(--ink);margin
 .product-buy{display:block;background:var(--primary);color:#fff;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.5px;padding:12px 18px;border-radius:4px;text-decoration:none;transition:background .2s;margin-top:auto}
 .product-buy:hover{background:var(--primary-dark)}
 
-/* DISCOVERY CTA SECTION (replaces intake form) */
+/* DISCOVERY CTA SECTION */
 .cta-wrap{max-width:720px;margin:0 auto;text-align:center}
 .cta-h{font-family:var(--serif);font-size:42px;font-weight:300;color:var(--ink);line-height:1.2;margin-bottom:18px}
 .cta-h em{color:var(--primary);font-style:italic}
@@ -198,6 +199,21 @@ body{font-family:var(--sans);background:var(--off-white);color:var(--ink);margin
 .cta-btn:hover{background:var(--primary-dark);transform:translateY(-1px)}
 .cta-note{font-family:var(--sans);font-size:13px;color:var(--warm-soft);margin-top:18px;line-height:1.7}
 .cta-note a{color:var(--primary);text-decoration:none}
+
+/* CONTACT FORM */
+.contact-form{background:#fff;border:0.5px solid #d4c8c0;border-radius:6px;padding:34px 32px;margin-top:36px;text-align:left;max-width:620px;margin-left:auto;margin-right:auto}
+.cf-field{margin-bottom:16px}
+.cf-field label{display:block;font-family:var(--sans);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--warm-soft);margin-bottom:7px}
+.cf-field input,.cf-field select,.cf-field textarea{width:100%;padding:12px 14px;border:1px solid #d8cac2;border-radius:3px;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--cream);outline:none;transition:border-color .2s,box-shadow .2s}
+.cf-field textarea{min-height:120px;resize:vertical;line-height:1.6}
+.cf-field input:focus,.cf-field select:focus,.cf-field textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(181,83,106,.12)}
+.cf-hint{display:none;background:var(--slate-lt);border-left:3px solid var(--slate);padding:14px 16px;border-radius:3px;margin-bottom:18px;font-family:var(--sans);font-size:13.5px;color:var(--slate);line-height:1.7}
+.cf-hint.show{display:block}
+.cf-hint a{color:var(--primary);font-weight:500}
+.cf-submit{width:100%;background:var(--primary);color:#fff;border:none;padding:15px;border-radius:3px;font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:.4px;cursor:pointer;transition:background .2s}
+.cf-submit:hover{background:var(--primary-dark)}
+.cf-note{font-family:var(--sans);font-size:12.5px;color:var(--warm-soft);text-align:center;margin-top:16px;line-height:1.7}
+.cf-note a{color:var(--primary);text-decoration:none}
 
 /* FOOTER */
 footer{background:var(--warm-dark);padding:56px 48px 36px}
@@ -253,6 +269,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
   .test-grid{grid-template-columns:1fr}
   .product-grid{grid-template-columns:1fr}
   .cta-h{font-size:30px}
+  .contact-form{padding:26px 20px}
   footer{padding:40px 24px 28px}
   .footer-nav{gap:16px}
 }
@@ -316,6 +333,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
     <a href="blog.html">Blog</a>
     <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener">Shop</a>
     <a href="faq.html">FAQ</a>
+    <a href="#contact">Contact</a>
     <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
   </div>
   <button class="hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
@@ -328,7 +346,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
   <a href="#services" onclick="closeMenu()">Services</a>
   <a href="blog.html" onclick="closeMenu()">Blog</a>
   <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener" onclick="closeMenu()">Shop</a>
-  <a href="#discovery" onclick="closeMenu()">Contact</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
   <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="mob-cta" onclick="closeMenu()">Book a Discovery Call</a>
 </div>
 </header>
@@ -357,7 +375,8 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
     <div class="about-row">
       <div>
         <div class="headshot" role="img" aria-label="Jennifer, Life Purpose Coach">
-          <img src="headshot.PNG" alt="Jennifer, Life Purpose Coach" style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+          <!-- To change this photo: upload your new photo to GitHub named exactly headshot.PNG and it will replace this automatically. The ?v=2 forces browsers to load the new one instead of the cached old one. -->
+          <img src="headshot.PNG?v=2" alt="Jennifer, Life Purpose Coach" style="width:100%;height:100%;object-fit:cover;object-position:top;" />
         </div>
       </div>
       <div class="about-right">
@@ -418,10 +437,11 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
       <div class="service">
         <div class="service-num">02</div>
         <div>
-          <h4>Group Coaching Cohort</h4>
-          <p>Beginning Thursday, August 6, 2026. Now accepting applications. This is a 12 week intimate coaching experience for those ready to break old patterns and do meaningful inner work in a guided group setting. You'll gain clarity, build emotional and mental resilience, and step out of isolation as you grow alongside others committed to change. Healing doesn't have to happen alone and lasting transformation rarely does.</p>
+          <h4>Identity Reset Fast Track Cohort</h4>
+          <span class="cohort-dates">Next cohort: Tue, Sept 29th &#8211; Tue, Oct 27th, 2026</span>
+          <p>The fast track version of my Identity Reset work, five Tuesdays instead of twelve weeks. Intimate group coaching for women ready to break old patterns and do real inner work together. You'll gain clarity, build emotional and mental resilience, and step out of isolation as you grow alongside others committed to change. Spots are limited, so the waitlist opens first.</p>
           <a href="services.html#cohort" class="service-link">View cohort details &#8594;</a><br>
-          <span class="badge badge-rose">Now Enrolling</span>
+          <span class="badge badge-rose">Waitlist Now Open</span>
         </div>
       </div>
       <div class="service">
@@ -503,15 +523,15 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
       </div>
       <div class="test-card">
         <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"I came into the 12-week cohort thinking I needed motivation. I left with a complete business plan, a life roadmap I could actually execute, and a clarity about my purpose I have never had before. I walked out ready to build, not just dream."</blockquote>
+        <blockquote>"I came into the cohort thinking I needed motivation. I left with a complete business plan, a life roadmap I could actually execute, and a clarity about my purpose I have never had before. I walked out ready to build, not just dream."</blockquote>
         <div class="test-name">Danielle F.</div>
-        <div class="test-type">Group Cohort, 12 weeks</div>
+        <div class="test-type">Group Cohort</div>
       </div>
       <div class="test-card">
         <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"The 8-week cohort gave me back myself. I had been in survival mode for so long I forgot what it felt like to just be me. I left lighter, clearer, with a real roadmap, and finally ready to build the life I had been dreaming about."</blockquote>
+        <blockquote>"The cohort gave me back myself. I had been in survival mode for so long I forgot what it felt like to just be me. I left lighter, clearer, with a real roadmap, and finally ready to build the life I had been dreaming about."</blockquote>
         <div class="test-name">Kezia M.</div>
-        <div class="test-type">Group Cohort, 8 weeks</div>
+        <div class="test-type">Group Cohort</div>
       </div>
     </div>
   </div>
@@ -544,7 +564,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
   <div class="sec-inner">
     <span class="lbl lbl-rose">Free Weekly Webinar</span>
     <h2 class="sec-h" id="webinar-h">Join me live,<br>every Tuesday.</h2>
-    <p class="sec-b">A free 90-minute identity reset session, every week. I teach. You ask questions. We do the work together,  limited to 20 women per session so I can actually hear you.</p>
+    <p class="sec-b">A free 90-minute identity reset session, every week. I teach. You ask questions. We do the work together, limited to 20 women per session so I can actually hear you.</p>
     <div class="webinar-card">
       <div class="webinar-when">
         <span class="lbl" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;display:block">When</span>
@@ -553,14 +573,14 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
       </div>
       <div class="webinar-content">
         <h3>The Identity Reset Webinar</h3>
-        <p>Inside the webinar, we look at one of the 7 fractured identities,  what it sounds like, where it came from, and one tool to start dismantling it this week. You'll leave with clarity and an actual practice, not just inspiration.</p>
+        <p>Inside the webinar, we look at one of the 7 fractured identities, what it sounds like, where it came from, and one tool to start dismantling it this week. You'll leave with clarity and an actual practice, not just inspiration.</p>
         <p class="webinar-meta">Limited to 20 women per session &nbsp;&middot;&nbsp; No replay shared</p>
         <a href="https://calendly.com/jennifer-renewedsoul/identity-reset-webinar" target="_blank" rel="noopener" class="btn-primary">Register for Next Tuesday &#8594;</a>
       </div>
     </div>
   </div>
 </section>
-  
+
   <!-- DIGITAL SHOP -->
 <section class="sec-gold" id="shop" aria-labelledby="shop-h">
   <div class="sec-inner">
@@ -618,16 +638,68 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
   </div>
 </section>
 
-<!-- DISCOVERY CALL CTA (replaces intake form) -->
-<section class="sec-rose" id="discovery" aria-labelledby="discovery-h">
+<!-- CONTACT / DISCOVERY CALL -->
+<section class="sec-rose" id="contact" aria-labelledby="contact-h">
   <div class="cta-wrap">
     <span class="lbl lbl-rose" style="text-align:center;display:block">Start here</span>
-    <h2 class="cta-h" id="discovery-h">Your renewal starts with<br><em>one conversation.</em></h2>
-    <p class="cta-sub">Book a free 15-minute discovery call. No commitment. Just an honest conversation about where you are, what you're carrying, and where you want to go next.</p>
+    <h2 class="cta-h" id="contact-h">Your renewal starts with<br><em>one conversation.</em></h2>
+    <p class="cta-sub">Book a free 15-minute discovery call, or tell me below what you're reaching out about and I'll get back to you personally.</p>
     <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="cta-btn">Book a Free Discovery Call &#8594;</a>
-    <p class="cta-note">Questions? Email <a href="mailto:jennifer@renewedsoul.co">jennifer@renewedsoul.co</a></p>
+
+    <form class="contact-form" onsubmit="return rsContactSubmit(event)">
+      <div class="cf-field">
+        <label for="cf-topic">What are you reaching out about?</label>
+        <select id="cf-topic" required onchange="rsTopicChange()">
+          <option value="">Choose one</option>
+          <option value="1:1 Coaching">1:1 Coaching</option>
+          <option value="Identity Reset Fast Track Waitlist, Sept 29th to Oct 27th">Join the Waitlist for the Identity Reset Fast Track</option>
+          <option value="Purpose Roadmapping Session">Purpose Roadmapping Session</option>
+          <option value="Leadership and Business Clarity">Leadership &amp; Business Clarity</option>
+          <option value="Trauma and Identity Healing Support">Trauma &amp; Identity Healing Support</option>
+          <option value="Speaking or Podcast Request">Speaking or Podcast Request</option>
+          <option value="Digital Workbook or Journal Question">Digital Workbook or Journal Question</option>
+          <option value="Something Else">Something Else</option>
+        </select>
+      </div>
+
+      <div class="cf-hint" id="cf-hint-oneonone">
+        You can book straight into my calendar for this one.<br>
+        <a href="https://calendly.com/jennifer-renewedsoul/1-1-coaching" target="_blank" rel="noopener">Book a 1:1 coaching session &#8594;</a><br>
+        <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener">Or start with a free 15-minute discovery call &#8594;</a>
+      </div>
+
+      <div class="cf-hint" id="cf-hint-coaching">
+        You can also book straight into my calendar for this one. <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener">Book a free 15-minute discovery call &#8594;</a>
+      </div>
+
+      <div class="cf-hint" id="cf-hint-waitlist">
+        The next cohort runs <strong>Tuesday, September 29th through Tuesday, October 27th, 2026</strong>. Send this form and I'll add you to the waitlist and email you the enrollment link before spots open publicly.
+      </div>
+
+      <div class="cf-field">
+        <label for="cf-name">Your name</label>
+        <input type="text" id="cf-name" required autocomplete="name">
+      </div>
+      <div class="cf-field">
+        <label for="cf-email">Your email</label>
+        <input type="email" id="cf-email" required autocomplete="email">
+      </div>
+      <div class="cf-field">
+        <label for="cf-phone">Phone (optional)</label>
+        <input type="tel" id="cf-phone" autocomplete="tel">
+      </div>
+      <div class="cf-field">
+        <label for="cf-msg">Tell me a little about where you are</label>
+        <textarea id="cf-msg" placeholder="Whatever you're carrying right now. As much or as little as you want to share."></textarea>
+      </div>
+      <button type="submit" class="cf-submit">Send My Message</button>
+      <p class="cf-note">This opens your email app with everything filled in, addressed to me. Just hit send.<br>Or email me directly at <a href="mailto:jennifer@renewedsoul.co">jennifer@renewedsoul.co</a></p>
+    </form>
   </div>
 </section>
+
+<!-- Old anchor kept so existing links to #discovery still land here -->
+<div id="discovery"></div>
 
 </main>
 
@@ -641,6 +713,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
       <a href="#services">Services</a>
       <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener">Shop</a>
       <a href="#teaching">Teaching</a>       <a href="faq.html">FAQ</a>
+      <a href="#contact">Contact</a>
       <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener">Book a Call</a>
     </nav>
     <div class="footer-social" aria-label="Social media">
@@ -677,17 +750,17 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
   <div class="modal">
     <button class="modal-close" onclick="closeModal('privacyModal')" aria-label="Close">&#215;</button>
     <h2 id="priv-title">Privacy Policy</h2>
-    <p><em>Last updated: April 2026</em></p>
+    <p><em>Last updated: August 2026</em></p>
     <p>Who We Are</p>
     <p>The Renewed Soul is a life purpose coaching business operated by Jennifer Jones. Our website is renewedsoul.co. You can reach us at jennifer@renewedsoul.co.</p>
     <h3>Information We Collect</h3>
-    <p>We collect information you voluntarily provide including your name, email address, phone number (optional), and any details you share through our intake form or email correspondence.</p>
+    <p>We collect information you voluntarily provide including your name, email address, phone number (optional), and any details you share through our contact form or email correspondence.</p>
     <h3>How We Use Your Information</h3>
     <ul><li>We use your information to respond to your inquiry, schedule discovery calls and coaching sessions, deliver coaching services you have enrolled in, send program updates and resources you have opted into, and notify you about digital product launches you have requested.</li></ul>
     <h3>What We Do Not Do</h3>
     <p>We never sell, rent, or share your personal information with third parties for marketing purposes. We do not use your information for any purpose beyond what is listed above.</p>
     <h3>Third Party Services</h3>
-    <p>Our website uses Calendly for booking calls, Stan Store for digital product sales, Stripe for cohort payments, and EmailJS for the assessment form. Each of these services has their own privacy policy governing how they handle your data.</p>
+    <p>Our website uses Calendly for booking calls, Stan Store for digital product sales, and Stripe for cohort payments. Our contact form opens your own email application and sends directly to us, so no third party stores that message. Each of these services has their own privacy policy governing how they handle your data.</p>
     <h3>Data Retention</h3>
     <p>We retain your information for as long as necessary to provide our services or as required by law. You may request deletion of your data at any time.</p>
     <h3>Your Rights</h3>
@@ -704,7 +777,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
   <div class="modal">
     <button class="modal-close" onclick="closeModal('termsModal')" aria-label="Close">&#215;</button>
     <h2 id="terms-title">Terms &amp; Conditions</h2>
-    <p><em>Last updated: April 2026</em></p>
+    <p><em>Last updated: August 2026</em></p>
     <h3>About Our Services</h3>
     <p>The Renewed Soul provides life purpose coaching services including 1:1 coaching programs, group coaching cohorts, purpose roadmapping sessions, and digital resources. All coaching is delivered virtually via Zoom.</p>
     <h3>Coaching Is Not Therapy</h3>
@@ -712,7 +785,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
     <h3>Coaching Relationship</h3>
     <p>Your results depend on your active participation, honesty, and commitment to the process. We are fully committed to supporting your transformation, but we cannot and do not guarantee specific outcomes. Every client's journey is unique.</p>
     <h3>Payments &amp; Refunds</h3>
-    <p>Payment terms for coaching programs are outlined in your individual coaching agreement. Digital product purchases are final and non-refundable. If you have questions about payment plans or cancellation, please email jennifer@renewedsoul.co before enrolling.</p>
+    <p>Payment terms for coaching programs are outlined in your individual coaching agreement. Digital product purchases are final and non-refundable. Cohort payment plans commit you to the full program fee regardless of attendance. If you have questions about payment plans or cancellation, please email jennifer@renewedsoul.co before enrolling.</p>
     <h3>Confidentiality</h3>
     <p>Everything shared in coaching sessions is kept strictly confidential. The only exceptions are if disclosure is required by law, or if there is a risk of harm to you or others.</p>
     <h3>Intellectual Property</h3>
@@ -731,13 +804,13 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
   <div id="rs-ia-card">
     <button id="rs-ia-close" aria-label="Close">&times;</button>
     <div class="rs-ia-body">
-      <div class="rs-ia-eyebrow">Free gift,  just for you</div>
+      <div class="rs-ia-eyebrow">Free gift, just for you</div>
       <h2 id="rs-ia-title">Trauma-Informed<br>Identity Assessment</h2>
       <p class="rs-ia-italic-sub">Discover who you truly are.</p>
-      <p class="rs-ia-desc">The gold inside you has always been there,  buried under trauma, broken cycles, and wounds no one else could see. This free assessment helps you see clearly where you are and what's next.</p>
+      <p class="rs-ia-desc">The gold inside you has always been there, buried under trauma, broken cycles, and wounds no one else could see. This free assessment helps you see clearly where you are and what's next.</p>
       <div class="rs-ia-infobox">
         <div class="rs-ia-infobox-label">Delivered instantly to your inbox</div>
-        <div class="rs-ia-infobox-value">100% Free,  No strings attached</div>
+        <div class="rs-ia-infobox-value">100% Free, No strings attached</div>
       </div>
       <ul class="rs-ia-list">
         <li>Uncover what's really holding you back</li>
@@ -748,10 +821,10 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
       <a href="https://stan.store/renewedsoul/p/my-free-trauma-informedformed-identity-assessment" target="_blank" rel="noopener" id="rs-ia-btn">Get My Free Assessment &#8594;</a>
       <p class="rs-ia-privacy">&#128274; Your information is completely private and will never be shared.</p>
     </div>
-    <p class="rs-ia-footer-quote">"You're not stuck. You're unexcavated.",  The Renewed Soul</p>
+    <p class="rs-ia-footer-quote">"You're not stuck. You're unexcavated." The Renewed Soul</p>
   </div>
 </div>
-</div>
+
 <script>
 function toggleMenu(btn){
   const m=document.getElementById('mobileMenu');
@@ -775,6 +848,54 @@ function closeModal(id){
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(m=>closeModal(m.id));
 });
+</script>
+
+<!-- CONTACT FORM JS -->
+<script>
+/* ── Change this one line if you ever want the form to go to a different inbox ── */
+var RS_CONTACT_EMAIL = 'jennifer@renewedsoul.co';
+
+function rsTopicChange(){
+  var v = document.getElementById('cf-topic').value;
+  var oneonone = document.getElementById('cf-hint-oneonone');
+  var coaching = document.getElementById('cf-hint-coaching');
+  var waitlist = document.getElementById('cf-hint-waitlist');
+  oneonone.classList.remove('show');
+  coaching.classList.remove('show');
+  waitlist.classList.remove('show');
+  if(v === '1:1 Coaching'){
+    oneonone.classList.add('show');
+  }
+  if(v === 'Purpose Roadmapping Session' || v === 'Leadership and Business Clarity'){
+    coaching.classList.add('show');
+  }
+  if(v.indexOf('Waitlist') !== -1){
+    waitlist.classList.add('show');
+  }
+}
+
+function rsContactSubmit(e){
+  e.preventDefault();
+  var topic = document.getElementById('cf-topic').value;
+  var name  = document.getElementById('cf-name').value.trim();
+  var email = document.getElementById('cf-email').value.trim();
+  var phone = document.getElementById('cf-phone').value.trim();
+  var msg   = document.getElementById('cf-msg').value.trim();
+
+  var subject = 'Website inquiry: ' + topic;
+  var body =
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n' +
+    'Phone: ' + (phone || 'Not provided') + '\n' +
+    'Reaching out about: ' + topic + '\n\n' +
+    'Message:\n' + (msg || '(none)') + '\n\n' +
+    '— Sent from renewedsoul.co';
+
+  window.location.href = 'mailto:' + RS_CONTACT_EMAIL +
+    '?subject=' + encodeURIComponent(subject) +
+    '&body=' + encodeURIComponent(body);
+  return false;
+}
 </script>
 
 <!-- ASSESSMENT POPUP JS (Stan Store redirect) -->
