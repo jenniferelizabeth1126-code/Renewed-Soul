@@ -428,9 +428,9 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
         <div>
           <h4>Identity Reset Sprint</h4>
           <span class="cohort-dates">Next cohort: Thu, Oct 1st &#8211; Thu, Oct 29th, 2026 &#183; 5:30 to 7:00 PM PT</span>
-          <p>The sprint version of my Identity Reset work, five Thursday evenings instead of twelve weeks. Intimate group coaching for women ready to break old patterns and do real inner work together. You'll gain clarity, build emotional and mental resilience, and step out of isolation as you grow alongside others committed to change. Spots are limited, so the waitlist opens first.</p>
+          <p>The sprint version of my Identity Reset work, five Thursday evenings instead of twelve weeks. Intimate group coaching for women ready to break old patterns and do real inner work together. You'll gain clarity, build emotional and mental resilience, and step out of isolation as you grow alongside others committed to change. Spots are limited and enrollment is open now.</p>
           <a href="services.html#cohort" class="service-link">View cohort details &#8594;</a><br>
-          <span class="badge badge-rose">Waitlist Now Open</span>
+          <span class="badge badge-rose">Enrollment Now Open</span>
         </div>
       </div>
       <div class="service">
@@ -619,7 +619,7 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
         <select id="cf-topic" required onchange="rsTopicChange()">
           <option value="">Choose one</option>
           <option value="1:1 Coaching">1:1 Coaching</option>
-          <option value="Identity Reset Sprint Waitlist, Oct 1st to Oct 29th">Join the Waitlist for the Identity Reset Sprint</option>
+          <option value="Identity Reset Sprint, Oct 1st to Oct 29th">Enroll in the Identity Reset Sprint</option>
           <option value="Purpose Roadmapping Session">Purpose Roadmapping Session</option>
           <option value="Leadership and Business Clarity">Leadership &amp; Business Clarity</option>
           <option value="Trauma and Identity Healing Support">Trauma &amp; Identity Healing Support</option>
@@ -639,8 +639,8 @@ footer{background:var(--warm-dark);padding:56px 48px 36px}
         You can also book straight into my calendar for this one. <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener">Book a free 15-minute discovery call &#8594;</a>
       </div>
 
-      <div class="cf-hint" id="cf-hint-waitlist">
-        The next cohort runs <strong>Thursday, October 1st through Thursday, October 29th, 2026</strong>, 5:30 to 7:00 PM Pacific, which is 8:30 PM Eastern. Send this form and I'll add you to the waitlist and email you the enrollment link before spots open publicly.
+      <div class="cf-hint" id="cf-hint-cohort">
+        The next cohort runs <strong>Thursday, October 1st through Thursday, October 29th, 2026</strong>, 5:30 to 7:00 PM Pacific, which is 8:30 PM Eastern. Send this form and I'll email you the enrollment link right away.
       </div>
 
       <div class="cf-field">
@@ -826,18 +826,18 @@ function rsTopicChange(){
   var v = document.getElementById('cf-topic').value;
   var oneonone = document.getElementById('cf-hint-oneonone');
   var coaching = document.getElementById('cf-hint-coaching');
-  var waitlist = document.getElementById('cf-hint-waitlist');
+  var cohort = document.getElementById('cf-hint-cohort');
   oneonone.classList.remove('show');
   coaching.classList.remove('show');
-  waitlist.classList.remove('show');
+  cohort.classList.remove('show');
   if(v === '1:1 Coaching'){
     oneonone.classList.add('show');
   }
   if(v === 'Purpose Roadmapping Session' || v === 'Leadership and Business Clarity'){
     coaching.classList.add('show');
   }
-  if(v.indexOf('Waitlist') !== -1){
-    waitlist.classList.add('show');
+  if(v.indexOf('Identity Reset Sprint') !== -1){
+    cohort.classList.add('show');
   }
 }
 
