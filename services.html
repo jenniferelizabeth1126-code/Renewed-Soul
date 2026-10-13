@@ -1,506 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Life purpose coaching programs: 1:1 coaching, group cohorts, purpose roadmapping, and digital workbooks.">
-  <title>Programs &amp; Services | The Renewed Soul</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    /* ── EXACT VARIABLES FROM YOUR index.html ── */
-    *{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --primary:#b5536a;
-      --primary-lt:#faedf0;
-      --primary-mid:#cc7085;
-      --primary-dark:#8a3048;
-      --gold:#c49a4a;
-      --gold-lt:#f7f0e2;
-      --gold-dark:#8a6a28;
-      --slate:#3d5a6e;
-      --slate-lt:#e8f0f5;
-      --slate-mid:#5a7a90;
-      --warm-dark:#2a3a45;
-      --cream:#fdf9f6;
-      --off-white:#faf5f0;
-      --warm-mid:#5a4040;
-      --warm-soft:#8a7070;
-      --ink:#1e1414;
-      --serif:'Cormorant Garamond',Georgia,serif;
-      --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
-    }
-    html{scroll-behavior:smooth}
-    body{font-family:var(--sans);background:var(--off-white);color:var(--ink);margin:0;line-height:1.6}
-
-    /* ── NAV ── */
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 48px;border-bottom:0.5px solid #d4c4bc;background:rgba(250,245,240,0.97);position:sticky;top:0;z-index:200;backdrop-filter:blur(8px)}
-    .nav-logo{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.3px}
-    .nav-logo em{color:var(--primary);font-style:italic}
-    .nav-links{display:flex!important;gap:28px;align-items:center}
-    .nav-links a{font-family:var(--sans);font-size:13px;color:var(--warm-soft);text-decoration:none;letter-spacing:.2px;transition:color .2s}
-    .nav-links a:hover{color:var(--primary)}
-    .nav-cta{background:var(--primary);color:#fff!important;font-family:var(--sans);font-size:12px;font-weight:500;padding:9px 20px;border-radius:3px;text-decoration:none;letter-spacing:.4px;transition:background .2s}
-    .nav-cta:hover{background:var(--primary-dark)}
-    .hamburger{display:none !important;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-    .hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
-    .mobile-menu{display:none;flex-direction:column;background:var(--off-white);border-top:0.5px solid #d4c4bc}
-    .mobile-menu a{font-family:var(--sans);font-size:14px;color:var(--ink);text-decoration:none;padding:14px 24px;border-bottom:0.5px solid #ece5e0}
-    .mobile-menu .mob-cta{background:var(--primary);color:#fff;text-align:center;margin:16px 24px 20px;padding:12px 24px;border-radius:3px}
-    .mobile-menu.open{display:flex}
-
-    /* ── ACCENT BAR ── */
-    .accent-bar{display:flex;height:3px}
-    .ab1{flex:3;background:var(--primary-mid)}
-    .ab2{flex:2;background:var(--gold)}
-    .ab3{flex:3;background:var(--slate-mid)}
-
-    /* ── HERO ── */
-    .page-hero{background:var(--slate);padding:96px 48px 88px;text-align:center}
-    .hero-eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#a8c4d4;margin-bottom:18px;display:block}
-    .page-hero h1{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.2rem);font-weight:300;line-height:1.18;color:#f5eeea;margin-bottom:20px;max-width:740px;margin-left:auto;margin-right:auto}
-    .page-hero h1 em{color:#e8c4a0;font-style:italic}
-    .page-hero p{font-family:var(--sans);font-size:16px;line-height:1.95;color:#b0ccd8;max-width:600px;margin:0 auto 14px}
-    .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
-    .btn-primary{background:var(--primary);color:#fff;border:none;padding:14px 32px;border-radius:3px;font-family:var(--sans);font-size:14px;font-weight:500;cursor:pointer;letter-spacing:.4px;transition:background .2s;text-decoration:none;display:inline-block}
-    .btn-primary:hover{background:var(--primary-dark)}
-    .btn-outline{background:transparent;color:#d4e4ee;border:1px solid #6a8ea8;padding:14px 26px;border-radius:3px;font-family:var(--sans);font-size:14px;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
-    .btn-outline:hover{background:rgba(255,255,255,.07);border-color:#a8c4d4}
-
-    /* ── JUMP BAR ── */
-    .jump-bar{background:#fff;border-bottom:0.5px solid #d4c4bc;overflow-x:auto;scrollbar-width:none}
-    .jump-bar::-webkit-scrollbar{display:none}
-    .jump-bar-inner{max-width:920px;margin:0 auto;padding:0 48px;display:flex;white-space:nowrap}
-    .jump-bar a{font-family:var(--sans);font-size:12px;letter-spacing:.2px;color:var(--warm-soft);text-decoration:none;padding:14px 18px;border-bottom:2px solid transparent;transition:all .2s;display:inline-block}
-    .jump-bar a:hover{color:var(--primary);border-bottom-color:var(--primary)}
-
-    /* ── PAGE BODY ── */
-    .page-body{max-width:920px;margin:0 auto;padding:80px 48px 120px}
-
-    /* ── SECTION BLOCKS ── */
-    .svc-section{margin-bottom:80px;scroll-margin-top:72px}
-    .lbl{font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;display:block;color:var(--primary)}
-    .sec-h{font-family:var(--serif);font-size:40px;font-weight:300;line-height:1.25;color:var(--ink);margin-bottom:14px}
-    .sec-b{font-family:var(--sans);font-size:17px;line-height:1.85;color:var(--warm-mid);padding-bottom:28px;border-bottom:0.5px solid #ddd4cc;margin-bottom:28px;max-width:680px}
-
-    /* ── RATE NOTE ── */
-    .rate-note{background:var(--gold-lt);border-left:3px solid var(--gold);border-radius:3px;padding:16px 20px;margin-bottom:24px;font-family:var(--sans);font-size:14.5px;line-height:1.75;color:var(--warm-mid);max-width:680px}
-    .rate-note strong{color:var(--gold-dark)}
-
-    /* ── SERVICE CARDS ── */
-    .svc-card{background:var(--off-white);border:0.5px solid #d4c8c0;border-radius:4px;padding:28px 32px;margin-bottom:14px;transition:box-shadow .2s,transform .2s}
-    .svc-card:hover{box-shadow:0 4px 20px rgba(90,64,64,.08);transform:translateY(-1px)}
-    .card-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:14px}
-    .card-name{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ink);margin-bottom:6px}
-    .card-sub{font-family:var(--sans);font-size:11px;color:var(--warm-soft);letter-spacing:.2px}
-    .card-price{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);white-space:nowrap;flex-shrink:0;text-align:right}
-    .card-price small{display:block;font-family:var(--sans);font-size:11px;color:var(--warm-soft);letter-spacing:.3px;margin-top:3px;font-weight:400}
-    .card-body{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--warm-mid)}
-    .card-body p+p{margin-top:10px}
-    .card-meta{margin-top:14px;padding-top:12px;border-top:0.5px solid #e8ddd8;font-family:var(--sans);font-size:13px;color:var(--warm-soft);letter-spacing:.2px}
-
-    /* ── CTA ROW ── */
-    .sec-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
-
-    /* ── PULLQUOTE ── */
-    .pullquote{border-left:3px solid var(--gold);padding:20px 26px;margin:0 0 80px;background:#1e2c38}
-    .pullquote p{font-family:var(--serif);font-size:22px;font-style:italic;color:#e8d8c8;line-height:1.6}
-    .pullquote cite{font-family:var(--sans);font-size:12px;color:#6a8a9a;margin-top:10px;display:block;font-style:normal;letter-spacing:.5px}
-
-    /* ── DIGITAL PRODUCT GRID ── */
-    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
-    .product-card{background:#fff;border:0.5px solid #d4c8c0;border-radius:6px;padding:28px 22px;text-align:center;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s}
-    .product-card:hover{box-shadow:0 6px 24px rgba(90,64,64,.10);transform:translateY(-2px)}
-    .product-image{width:100%;aspect-ratio:1/1.235;display:flex;align-items:center;justify-content:center;background:var(--primary-lt);border-radius:4px;margin-bottom:22px;overflow:hidden}
-    .product-image img{width:100%;height:100%;object-fit:cover;display:block}
-    .product-tag{font-family:var(--sans);font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--primary);margin-bottom:10px;font-weight:500}
-    .product-name{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:6px}
-    .product-sub{font-family:var(--sans);font-size:12.5px;color:var(--warm-soft);font-style:italic;margin-bottom:14px;line-height:1.5}
-    .product-price{font-family:var(--serif);font-size:34px;font-weight:300;color:var(--primary-dark);margin:6px 0 6px}
-    .product-meta{font-family:var(--sans);font-size:10.5px;color:var(--warm-soft);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
-    .product-desc{font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--warm-mid);margin-bottom:22px;flex-grow:1}
-    .product-buy{display:block;background:var(--primary);color:#fff;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.5px;padding:13px 20px;border-radius:4px;text-decoration:none;transition:background .2s;margin-top:auto}
-    .product-buy:hover{background:var(--primary-dark)}
-
-    /* ── COHORT SESSION DATES ── */
-    .date-list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 auto 32px;max-width:700px}
-    .date-chip{background:#fff;border:1px solid #E8DDD5;border-radius:6px;padding:10px 16px;font-family:var(--sans);font-size:13px;color:#2A3345}
-    .date-chip span{display:block;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#B5536A;margin-bottom:2px}
-
-    /* ── FOOTER ── */
-    footer{background:var(--warm-dark);padding:56px 48px 36px}
-    .footer-inner{max-width:920px;margin:0 auto;text-align:center}
-    .footer-logo{font-family:var(--serif);font-size:24px;font-weight:300;color:#e8d8cc;letter-spacing:.5px;margin-bottom:10px;display:block;text-decoration:none}
-    .footer-logo em{color:var(--primary-mid);font-style:italic}
-    .footer-tagline{font-family:var(--sans);font-size:13px;color:#7a9ab0;line-height:1.8;max-width:480px;margin:0 auto 28px}
-    .footer-nav{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
-    .footer-nav a{font-family:var(--sans);font-size:13px;color:#7a9ab0;text-decoration:none;transition:color .2s}
-    .footer-nav a:hover{color:var(--primary-mid)}
-    .footer-social{display:flex;gap:16px;justify-content:center;margin-bottom:18px}
-    .footer-social a{width:34px;height:34px;border:1px solid rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#7a9ab0;text-decoration:none;font-size:14px;transition:all .2s}
-    .footer-social a:hover{border-color:var(--primary-mid);color:var(--primary-mid)}
-    .footer-email{display:block;font-family:var(--sans);font-size:13px;color:var(--primary-mid);text-decoration:none;margin-bottom:28px}
-    .footer-copy{font-family:var(--sans);font-size:11px;color:rgba(255,255,255,0.25);border-top:0.5px solid rgba(255,255,255,0.08);padding-top:20px}
-    .footer-copy a{color:rgba(255,255,255,0.3);text-decoration:none;margin:0 6px}
-    .footer-copy a:hover{color:var(--primary-mid)}
-
-    /* ── MOBILE ── */
-    @media(max-width:768px){
-      .nav{padding:14px 20px}
-      .nav-links{display:none!important}
-      .hamburger{display:flex!important}
-      .page-hero{padding:64px 20px 56px}
-      .jump-bar-inner{padding:0 16px}
-      .page-body{padding:52px 20px 80px}
-      .svc-card{padding:22px 20px}
-      .pullquote{margin:0 0 60px}
-      .product-grid{grid-template-columns:1fr;gap:20px}
-      footer{padding:48px 20px 32px}
-    }
-    @media(min-width:769px) and (max-width:1024px){
-      .product-grid{grid-template-columns:repeat(2,1fr)}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Work With Me | Coaching, Identity Reset Cohort, Purpose Roadmapping | The Renewed Soul</title>
+<meta name="description" content="Private transformation coaching, the Identity Reset Cohort starting October 22, Purpose Roadmapping, Vision Activation, and digital workbooks with Jennifer Jones.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://renewedsoul.co/services.html">
+<meta name="theme-color" content="#B4546C">
+<meta property="og:type" content="website"><meta property="og:site_name" content="The Renewed Soul"><meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://renewedsoul.co/services.html"><meta property="og:title" content="Work With Me | Coaching, Identity Reset Cohort, Purpose Roadmapping | The Renewed Soul"><meta property="og:description" content="Private transformation coaching, the Identity Reset Cohort starting October 22, Purpose Roadmapping, Vision Activation, and digital workbooks with Jennifer Jones."><meta property="og:image" content="https://renewedsoul.co/images/cohort.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Work With Me | Coaching, Identity Reset Cohort, Purpose Roadmapping | The Renewed Soul"><meta name="twitter:description" content="Private transformation coaching, the Identity Reset Cohort starting October 22, Purpose Roadmapping, Vision Activation, and digital workbooks with Jennifer Jones."><meta name="twitter:image" content="https://renewedsoul.co/images/cohort.jpg">
+<link rel="icon" href="logo.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://renewedsoul.co/#business", "name": "The Renewed Soul", "url": "https://renewedsoul.co/", "logo": "https://renewedsoul.co/logo.png", "email": "jennifer@renewedsoul.co", "sameAs": ["https://www.instagram.com/therenewedsoulcoaching", "https://www.facebook.com/renewedsoulcoaching", "https://www.tiktok.com/@therenewedsoulcoach", "https://www.youtube.com/channel/UCcUUK5c2Fx3Fn_vhpyp1Ylw"]}, {"@type": "WebPage", "url": "https://renewedsoul.co/services.html", "name": "Work With Me | Coaching, Identity Reset Cohort, Purpose Roadmapping | The Renewed Soul", "description": "Private transformation coaching, the Identity Reset Cohort starting October 22, Purpose Roadmapping, Vision Activation, and digital workbooks with Jennifer Jones."}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-<!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav-logo"><img src="logo.png" alt="The Renewed Soul" style="height:120px; width:auto; display:block;"></a>
-  <div class="nav-links">
-    <a href="index.html#about">About</a>
-    <a href="services.html">Services</a>
-    <a href="blog.html">Blog</a>
-    <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener">Shop</a>
-    <a href="index.html#contact">Contact</a>
-    <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" class="nav-cta">Book a Call</a>
-  </div>
-  <button class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav> <div class="nav-border"></div>
-<div class="mobile-menu" id="mob">
-  <a href="index.html#about">About</a>
-  <a href="services.html">Services</a>
-  <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener">Shop</a>
-  <a href="index.html#contact">Contact</a>
-  <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" class="mob-cta">Book a Call</a>
-</div>
-
-<!-- ACCENT BAR -->
-<div class="accent-bar"><div class="ab1"></div><div class="ab2"></div><div class="ab3"></div></div>
-
-<!-- JUMP BAR -->
-<div class="jump-bar">
-  <div class="jump-bar-inner">
-    <a href="#signature">1:1 Coaching</a>
-    <a href="#roadmap">Purpose Roadmapping</a>
-    <a href="#cohort">Group Cohort</a>
-    <a href="#digital">Digital Resources</a>
-  </div>
-</div>
-
-<!-- HERO -->
-<div class="page-hero">
-  <span class="hero-eyebrow">Work with me</span>
-  <h1>Choose your path<br>to <em>renewal</em></h1>
-  <p>Every path leads to the same destination: a life that is fully, unapologetically yours. Start wherever you are.</p>
-  <div class="hero-btns">
-    <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" class="btn-primary">Book My Discovery Call</a>
-    <a href="#cohort" class="btn-outline">Enroll in the Sprint &#8594;</a>
-  </div>
-</div>
-
-<!-- PAGE BODY -->
-<div class="page-body">
-
-  <!-- 01 · 1:1 SIGNATURE COACHING -->
-  <div class="svc-section" id="signature">
-    <span class="lbl">01 · 1:1 Signature Coaching</span>
-    <h2 class="sec-h">Deep, personalized work.<br>Built entirely around you.</h2>
-    <p class="sec-b">Custom roadmap, weekly sessions, full accountability. Choose the program length that meets you where you are. Every option below is a complete transformation path.</p>
-
-    <div class="svc-card">
-      <div class="card-top">
-        <div>
-          <div class="card-name">🧭 Clarity Session</div>
-          <div class="card-sub">1 call · 60 minutes</div>
-        </div>
-        <div class="card-price">$175</div>
-      </div>
-      <div class="card-body">
-        <p>If you feel stuck, scattered, or unsure of your next move, this session is designed to bring immediate clarity and direction. We cut through confusion, identify what's really keeping you stuck, and define what aligned forward movement looks like for you right now. You'll leave with honest insight, a clear next-step strategy, and guidance on what type of support best fits where you are in your journey, whether that's continued coaching or a more structured path forward.</p>
-        <p>Clear, direct, and grounded support to help you move forward with confidence.</p>
-      </div>
-      <p class="card-meta">Single 60-min video call &nbsp;·&nbsp; Best starting point if you're unsure where to begin</p>
-      <div style="margin-top:20px;">
-        <a href="https://calendly.com/jennifer-renewedsoul/1-1-coaching" target="_blank" rel="noopener" class="btn-primary" style="font-size:14px;letter-spacing:0.5px;">Book Clarity Session for $175 &#8594;</a>
-      </div>
-    </div>
-
-    <div class="svc-card">
-      <div class="card-top">
-        <div>
-          <div class="card-name">🧡 Identity Reset</div>
-          <div class="card-sub">8 weeks · 8 sessions</div>
-        </div>
-        <div class="card-price">$1,297</div>
-      </div>
-      <div class="card-body">
-        <p>An 8-week focused coaching experience designed to help you step out of confusion, misalignment, and the exhausting cycle of not knowing who you are outside of what you do or what others expect from you. Through intentional inner work, we address identity wounds at the root, release outdated patterns, and reconnect you to your values, voice, and internal sense of direction. You'll begin to make decisions from clarity instead of survival, overthinking, or self-doubt.</p>
-        <p>By the end of this work, you'll have a grounded sense of identity, stronger self-trust, and a clear foundation for how you want to live, lead, and move forward, without second-guessing who you are.</p>
-      </div>
-      <p class="card-meta">8 weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Discovery call required to enroll</p>
-    </div>
-
-    <div class="svc-card">
-      <div class="card-top">
-        <div>
-          <div class="card-name">🔑 Inner Alignment</div>
-          <div class="card-sub">12 weeks · 12 sessions</div>
-        </div>
-        <div class="card-price">$1,897</div>
-      </div>
-      <div class="card-body">
-        <p>A 12-week deep coaching experience designed to bring your identity, mindset, and direction into full alignment. This is for the woman who knows something feels misaligned, in her relationships, her work, and within herself, and is ready to stop repeating patterns that no longer fit who she's becoming. Together, we go beyond surface-level insight to address the root of what's been holding you back. We uncover what's been buried, heal internal misalignment, and rebuild a clear, grounded sense of direction for your life and decisions.</p>
-        <p>By the end of this process, you'll move with clarity, self-trust, and intention knowing who you are, what you're building, and how to move forward without second-guessing yourself.</p>
-      </div>
-      <p class="card-meta">12 weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Discovery call required to enroll</p>
-    </div>
-
-    <div class="svc-card">
-      <div class="card-top">
-        <div>
-          <div class="card-name">✨ Signature Coaching: Deep Renewal</div>
-          <div class="card-sub">6 months · 24 sessions</div>
-        </div>
-        <div class="card-price">$3,497</div>
-      </div>
-      <div class="card-body">
-        <p>A six-month, high-touch coaching container designed around your story, your patterns, and your long-term transformation. This is deep, intentional work that addresses the internal systems shaping your identity, decisions, and direction. We go beneath surface-level change to identify and shift the cycles, beliefs, and identity patterns that have kept you stuck in repetition. From there, we rebuild how you see yourself, how you make decisions, and how you move through life with clarity and intention.</p>
-        <p>You'll leave this experience with a grounded sense of identity, a clear and structured roadmap for your next chapter, and the internal capacity to follow through on what you say you want, without self-sabotage or confusion. This is for the woman who is ready for sustained, embodied change, not temporary breakthroughs.</p>
-      </div>
-      <p class="card-meta">24 weekly 1:1 sessions &nbsp;·&nbsp; Payment plans available &nbsp;·&nbsp; Most comprehensive path &nbsp;·&nbsp; Discovery call required to enroll</p>
-    </div>
-
-    <div class="sec-cta">
-      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call &#8594;</a>
-    </div>
-  </div>
-
-  <!-- PULLQUOTE -->
-  <div class="pullquote">
-    <p>"I don't just coach you. I find the gold in you and help you pull it out."</p>
-    <cite>Jennifer, The Renewed Soul</cite>
-  </div>
-
-  <!-- 02 · PURPOSE ROADMAPPING -->
-  <div class="svc-section" id="roadmap">
-    <span class="lbl">02 · Purpose Roadmapping</span>
-    <h2 class="sec-h">A clear plan for what comes next.</h2>
-    <p class="sec-b">For the woman who has the drive but needs the direction. Walk away with a real, actionable roadmap, not just inspiration.</p>
-
-    <div class="svc-card">
-      <div class="card-top">
-        <div>
-          <div class="card-name">🧠 Purpose Roadmapping Session</div>
-          <div class="card-sub">1 session · 2 hours</div>
-        </div>
-        <div class="card-price">$450<small>2 hours plus your written plan</small></div>
-      </div>
-      <div class="card-body">
-        <p>A focused, high-impact 2-hour session designed to bring clarity to where you are, what's keeping you stuck, and the most aligned path forward. We map your strengths, patterns, goals, and internal blocks to uncover a clear direction for your next season. You'll leave with a structured, written roadmap outlining your direction, priorities, and next steps, so you can stop overthinking and start executing with clarity and confidence.</p>
-        <p>This is for the woman who has vision and drive but needs clear direction and structure. No vague advice, just honest insight and a practical plan tailored to your life, purpose, and capacity.</p>
-      </div>
-      <p class="card-meta">Single 2-hour intensive &nbsp;·&nbsp; Written roadmap delivered after the session &nbsp;·&nbsp; Session recording included</p>
-      <div style="margin-top:20px;">
-        <a href="index.html#contact" class="btn-primary" style="font-size:14px;letter-spacing:0.5px;">Request a Roadmapping Session &#8594;</a>
-      </div>
-    </div>
-
-    <div class="sec-cta">
-      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call &#8594;</a>
-    </div>
-  </div>
-
-  <!-- 03 · GROUP COHORT -->
-  <div class="svc-section" id="cohort">
-    <span class="lbl">03 · Group Coaching Cohort</span>
-    <h2 class="sec-h">Heal in community.<br>Rise in community.</h2>
-    <p class="sec-b">Because you were never meant to carry this alone. An intimate circle doing the deep work together, five Thursdays this fall.</p>
-
-    <div class="svc-card">
-      <div class="card-top">
-        <div>
-          <div class="card-name">🦋 The Identity Reset Sprint</div>
-          <div class="card-sub">5 weeks · Thursday, Oct 1st to Thursday, Oct 29th, 2026 · 5:30 to 7:00 PM PT · limited spots</div>
-        </div>
-        <div class="card-price">$397<small>paid in full</small></div>
-      </div>
-      <div class="card-body">
-        <p>This is the sprint version of my Identity Reset work. The same framework I teach over twelve weeks, condensed into five focused Thursdays for women who want to start moving now instead of waiting on a longer program.</p>
-        <p>We meet every Thursday evening from 5:30 to 7:00 PM Pacific, which is 8:30 PM Eastern, for 90 minutes of guided group coaching. Each week takes on one of the fractured identities: where it came from, how it still runs your decisions, and the specific work to dismantle it. You'll leave each session with something to practice, not just something to think about.</p>
-        <p>This is not passive learning. It is active transformation in a shared, accountable space, and five weeks is long enough to shift something real without asking you to commit half a year before you know it works.</p>
-      </div>
-      <p class="card-meta">$397 paid in full, or 3 payments of $199 &nbsp;·&nbsp; Limited spots &nbsp;·&nbsp; Enrollment open now</p>
-    </div>
-
-    <!-- ENROLLMENT SECTION -->
-    <section style="background:#FAF5F0;padding:80px 24px;text-align:center;margin-top:20px;border-radius:4px;">
-      <div style="max-width:860px;margin:0 auto;">
-        <p style="font-family:sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#B5536A;margin:0 0 12px;">Enrollment now open</p>
-        <h2 style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;line-height:1.15;margin:0 0 8px;">Identity Reset<br><em style="color:#C49A4A;">Sprint</em></h2>
-        <p style="font-family:sans-serif;font-size:15px;color:#5A7080;line-height:1.7;margin:0 auto 32px;max-width:560px;">Five weeks of deep, guided work for women ready to come home to themselves. Before you launch the business, leave the job, or step into the next chapter. This is where we start. Identity first. Then everything opens up.</p>
-
-        <div style="background:#B5536A;border-radius:8px;padding:14px 28px;margin:0 auto 28px;display:inline-block;">
-          <p style="font-family:sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#F5D5DC;margin:0 0 2px;">Cohort runs</p>
-          <strong style="font-family:Georgia,serif;font-size:22px;font-weight:400;color:#fff;">Thursday, October 1st to Thursday, October 29th, 2026</strong>
-          <p style="font-family:sans-serif;font-size:13px;color:#F5D5DC;margin:6px 0 0;">5:30 to 7:00 PM Pacific &#183; 8:30 to 10:00 PM Eastern</p>
-        </div>
-
-        <div class="date-list">
-          <div class="date-chip"><span>Week 1</span>Thu, Oct 1st</div>
-          <div class="date-chip"><span>Week 2</span>Thu, Oct 8th</div>
-          <div class="date-chip"><span>Week 3</span>Thu, Oct 15th</div>
-          <div class="date-chip"><span>Week 4</span>Thu, Oct 22nd</div>
-          <div class="date-chip"><span>Week 5</span>Thu, Oct 29th</div>
-        </div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">
-          <div style="background:#fff;border-radius:10px;border:1px solid #E8DDD5;padding:20px 16px;text-align:center;">
-            <span style="font-family:sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B5536A;">5 Group Sessions</span>
-            <p style="font-family:Georgia,serif;font-size:15px;color:#2A3345;margin:8px 0 0;line-height:1.4;">90 minutes every Thursday, 5:30 to 7:00 PM Pacific, with Jennifer and your cohort</p>
-          </div>
-          <div style="background:#fff;border-radius:10px;border:1px solid #E8DDD5;padding:20px 16px;text-align:center;">
-            <span style="font-family:sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B5536A;">Weekly Practice</span>
-            <p style="font-family:Georgia,serif;font-size:15px;color:#2A3345;margin:8px 0 0;line-height:1.4;">Real tools to work between sessions, not just notes</p>
-          </div>
-          <div style="background:#fff;border-radius:10px;border:1px solid #E8DDD5;padding:20px 16px;text-align:center;">
-            <span style="font-family:sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B5536A;">Small Circle</span>
-            <p style="font-family:Georgia,serif;font-size:15px;color:#2A3345;margin:8px 0 0;line-height:1.4;">Kept intentionally small so every woman is actually heard</p>
-          </div>
-        </div>
-
-        <h3 style="font-family:Georgia,serif;font-size:26px;font-weight:300;color:#2A3345;margin:0 0 8px;">Two ways to join</h3>
-        <p style="font-family:sans-serif;font-size:14px;color:#5A7080;margin:0 auto 24px;max-width:560px;line-height:1.6;">Pay in full and it's <strong style="color:#B5536A;">$397</strong>, or split it into three interest free payments.</p>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:560px;margin:0 auto 36px;">
-          <div style="background:#fff;border-radius:10px;border:2px solid #B5536A;padding:28px 20px;text-align:center;">
-            <p style="font-family:sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#B5536A;margin:0 0 8px;">Pay in full, best value</p>
-            <p style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;margin:0;line-height:1;">$397</p>
-            <p style="font-family:sans-serif;font-size:12px;color:#888;margin:6px 0 2px;">One payment for the full five weeks</p>
-            <p style="font-family:sans-serif;font-size:12px;color:#B5536A;font-weight:600;margin:0 0 16px;">You save $200</p>
-            <!-- STRIPE: pay in full, $397 one time -->
-            <a href="https://buy.stripe.com/6oU7sE84hfT65A2exOfQI0g" target="_blank" rel="noopener" style="display:block;padding:13px;border-radius:6px;background:#B5536A;color:#fff;font-family:sans-serif;font-size:14px;font-weight:500;letter-spacing:0.3px;text-decoration:none;">Enroll Now</a>
-          </div>
-          <div style="background:#fff;border-radius:10px;border:1.5px solid #E8DDD5;padding:28px 20px;text-align:center;">
-            <p style="font-family:sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#3D5A6E;margin:0 0 8px;">3 payments</p>
-            <p style="font-family:Georgia,serif;font-size:42px;font-weight:300;color:#2A3345;margin:0;line-height:1;">$199</p>
-            <p style="font-family:sans-serif;font-size:12px;color:#888;margin:6px 0 2px;">Three payments of $199, totaling $597</p>
-            <p style="font-family:sans-serif;font-size:11px;color:#888;margin:0 0 16px;">Interest free</p>
-            <!-- STRIPE: 3 payment plan, $199 monthly -->
-            <a href="https://buy.stripe.com/14AeV6gAN0Yc8Me75mfQI0h" target="_blank" rel="noopener" style="display:block;padding:13px;border-radius:6px;background:#3D5A6E;color:#fff;font-family:sans-serif;font-size:14px;font-weight:500;letter-spacing:0.3px;text-decoration:none;">Enroll Now</a>
-          </div>
-        </div>
-
-        <p style="font-family:sans-serif;font-size:12px;color:#AAA;font-style:italic;margin-top:32px;">"You're not stuck. You're unexcavated." The Renewed Soul</p>
-      </div>
-    </section>
-  </div>
-
-  <!-- 04 · DIGITAL WORKBOOKS -->
-  <div class="svc-section" id="digital">
-    <span class="lbl">04 · Digital Workbooks &amp; Journals</span>
-    <h2 class="sec-h">Begin at home, today.</h2>
-    <p class="sec-b">Self-paced identity work for women doing the work on their own time. Each workbook is built on the same framework I use in my coaching, delivered instantly to your inbox.</p>
-
-    <div class="product-grid">
-
-      <!-- Break the Cycle -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="book-break-the-cycle.png" alt="Break the Cycle 7-Day Identity Excavation Workbook">
-        </div>
-        <p class="product-tag">Start Here</p>
-        <h3 class="product-name">Break the Cycle</h3>
-        <p class="product-sub">The 7-Day Identity Excavation Workbook</p>
-        <p class="product-price">$20</p>
-        <p class="product-meta">43 pages · instant digital download</p>
-        <p class="product-desc">Stop living from the false you, in one week. Daily prompts, body check-ins, and declarations to identify what's keeping you stuck and begin breaking the cycle.</p>
-        <a href="https://stan.store/renewedsoul/p/break-the-cycle-workbook-f9pijyvz" target="_blank" rel="noopener" class="product-buy">Buy Now for $20 &#8594;</a>
-      </div>
-
-      <!-- 21-Day Journal -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="book-21-day-journal.png" alt="The 21-Day Renewed Soul Journal">
-        </div>
-        <p class="product-tag">Daily Practice</p>
-        <h3 class="product-name">The 21-Day Journal</h3>
-        <p class="product-sub">Three weeks of quiet, daily work</p>
-        <p class="product-price">$27</p>
-        <p class="product-meta">56 pages · instant digital download</p>
-        <p class="product-desc">21 days of guided prompts to reconnect you with your voice, your values, and who you were before the world told you who to be. Built on the 7 fractured identities.</p>
-        <a href="https://stan.store/renewedsoul/p/get-my-21-day-renewed-soul-journal-now" target="_blank" rel="noopener" class="product-buy">Buy Now for $27 &#8594;</a>
-      </div>
-
-      <!-- Unexcavated Woman -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="book-unexcavated-woman.png" alt="The Unexcavated Woman, A Self-Guided Identity Reset">
-        </div>
-        <p class="product-tag">The Full Guide</p>
-        <h3 class="product-name">The Unexcavated Woman</h3>
-        <p class="product-sub">A Self-Guided Identity Reset</p>
-        <p class="product-price">$47</p>
-        <p class="product-meta">51 pages · instant digital download</p>
-        <p class="product-desc">All 7 fractured identities. The complete 6-phase framework. Renunciation and replacement library, somatic toolkit, and identity statement. The complete guide to coming home to who you were always made to be.</p>
-        <a href="https://stan.store/renewedsoul/p/identity-reset-workbook-tkueg3rs" target="_blank" rel="noopener" class="product-buy">Buy Now for $47 &#8594;</a>
-      </div>
-
-    </div>
-
-    <p style="text-align:center;font-family:var(--sans);font-size:13px;color:var(--warm-soft);font-style:italic;margin-top:32px;">Visit my full Stan Store at <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;font-weight:500;">stan.store/renewedsoul</a></p>
-  </div>
-
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <a href="index.html" class="footer-logo">The <em>Renewed</em> Soul</a>
-    <p class="footer-tagline">For every person who survived and still wonders what they were made for.<br>You are not done. You are just beginning.</p>
-    <nav class="footer-nav">
-      <a href="index.html#about">About</a>
-      <a href="services.html">Services</a>
-      <a href="blog.html">Blog</a>
-      <a href="https://stan.store/renewedsoul" target="_blank" rel="noopener">Shop</a>
-      <a href="index.html#teaching">Teaching</a>
-      <a href="faq.html">FAQ</a>
+<body data-page="services.html">
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+  <div class="wrap head">
+    <a class="brand" href="index.html" aria-label="The Renewed Soul home"><img src="logo-header.png" alt="The Renewed Soul, Life Purpose Coaching"></a>
+    <button class="menu" aria-expanded="false" aria-controls="mainnav">Menu</button>
+    <nav class="main" id="mainnav" aria-label="Main">
+      <a href="about.html">Meet Jennifer</a>
+      <div class="dd"><a href="services.html" aria-current="page">Work With Me</a>
+        <ul><li><a href="services.html#signature">Private Coaching</a></li><li><a href="services.html#cohort">Identity Reset Cohort</a></li><li><a href="services.html#roadmap">Purpose Roadmapping</a></li><li><a href="services.html#vision">Vision Activation</a></li></ul></div>
+      <a href="speaking.html">Speaking</a>
+      <a class="quiz-link" href="quiz.html">Free Quiz</a>
+      <div class="dd"><a href="index.html#resources">Resources</a>
+        <ul><li><a href="#youtube" data-yt-open>Videos</a></li><li><a href="blog.html">Blog</a></li><li><a href="services.html#digital">Workbooks and Journals</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
       <a href="index.html#contact">Contact</a>
-      <a href="https://calendly.com/jennifer-renewedsoul/15min" target="_blank">Book a Call</a>
+      <a class="btn btn-rose" href="https://calendly.com/jennifer-renewedsoul/15min">Book a Call</a>
     </nav>
-    <div class="footer-social">
-      <a href="https://www.instagram.com/therenewedsoulcoaching" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
-      </a>
-      <a href="https://www.facebook.com/renewedsoulcoaching" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@therenewedsoulcoach" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
-      </a>
-      <a href="https://www.youtube.com/channel/UCcUUK5c2Fx3Fn_vhpyp1Ylw" target="_blank" rel="noopener" aria-label="YouTube">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-      </a>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-hero hero">
+  <div class="blob a parallax" data-speed="0.18"></div>
+  <div class="wrap">
+    <p class="kicker">Work with me</p>
+    <h1>Find the support that fits <em>your next chapter.</em></h1>
+    <p class="lede">Whether you're ready to explore your identity, get clear on your purpose, or build something meaningful, there's a way to work together.</p>
+    <div class="ctas" style="margin-top:2rem"><a class="btn btn-line" href="#signature">Private Coaching</a><a class="btn btn-rose" href="#cohort">Identity Reset Cohort</a><a class="btn btn-line" href="#roadmap">Purpose Roadmapping</a><a class="btn btn-line" href="#vision">Vision Activation</a></div>
+  </div>
+</section>
+<section id="signature" class="tint">
+  <div class="wrap">
+    <div class="areas-head" style="text-align:left;margin-left:0" data-reveal><p class="kicker">Private coaching</p><h2>Personalized, <em>at your pace.</em></h2><p class="lede" style="margin-top:1rem">A space to examine limiting patterns, strengthen your mindset, rebuild self trust, and take intentional steps toward your goals. All sessions are virtual.</p></div>
+    <div class="packs">
+      <article class="pack" data-reveal data-delay="0"><p class="meta">1 session, 60 minutes</p><h3>Clarity Session</h3><p class="price">$175</p><p>For when you feel stuck, scattered, or unsure of your next move. We name what's really keeping you stuck and define your next step.</p><p class="incl">The best starting point if you're not sure where to begin.</p><a class="btn btn-line" href="https://calendly.com/jennifer-renewedsoul/1-1-coaching">Book a Clarity Session</a></article>
+      <article class="pack" data-reveal data-delay="120"><p class="meta">8 weeks, 8 sessions</p><h3>Identity Reset</h3><p class="price">$1,297</p><p>Focused coaching to address identity wounds at the root, release outdated patterns, and reconnect you to your values, voice, and direction.</p><p class="incl">Weekly 1:1 sessions. Payment plans available. Discovery call required.</p><a class="btn btn-line" href="https://calendly.com/jennifer-renewedsoul/15min">Book a discovery call</a></article>
+      <article class="pack" data-reveal data-delay="0"><p class="meta">12 weeks, 12 sessions</p><h3>Inner Alignment</h3><p class="price">$1,897</p><p>Bring your identity, mindset, and direction into alignment, so you stop repeating patterns that no longer fit who you're becoming.</p><p class="incl">Weekly 1:1 sessions. Payment plans available. Discovery call required.</p><a class="btn btn-line" href="https://calendly.com/jennifer-renewedsoul/15min">Book a discovery call</a></article>
+      <article class="pack" data-reveal data-delay="120"><p class="meta">6 months, 24 sessions</p><h3>Deep Renewal</h3><p class="price">$3,497</p><p>Long term, high touch coaching for sustained change through significant patterns, life transitions, and the goals you're ready to pursue.</p><p class="incl">Our most comprehensive path. Payment plans available. Discovery call required.</p><a class="btn btn-line" href="https://calendly.com/jennifer-renewedsoul/15min">Book a discovery call</a></article>
     </div>
-    <a href="mailto:jennifer@renewedsoul.co" class="footer-email">jennifer@renewedsoul.co</a>
-    <p class="footer-copy">
-      © 2026 Renewed Soul Coaching · All rights reserved
-      <a href="index.html#privacy">Privacy Policy</a>
-      <a href="index.html#terms">Terms &amp; Conditions</a>
-    </p>
+  </div>
+</section>
+<section id="cohort" class="cohort-band">
+  <div class="wrap">
+    <div class="two" style="align-items:center">
+      <div data-reveal="left">
+        <p class="kicker" style="color:var(--petal-lt)">Identity Reset Cohort</p>
+        <h2>Who did you become <em>to survive?</em></h2>
+        <p class="lede" style="margin-top:1.3rem">A five week live group coaching experience for women ready to recognize survival based identity patterns, explore the beliefs connected to them, and begin making healthier choices in community.</p>
+        <div class="dates"><span>Oct 22</span><span>Oct 29</span><span>Nov 5</span><span>Nov 12</span><span>Nov 19</span></div>
+        <p>Thursdays, 5:30 to 7:00 PM Pacific (8:30 to 10:00 PM Eastern)</p>
+        <a class="btn btn-white" href="https://forms.gle/mDTVDYQPwBwB2Vpw5">Apply for the cohort</a>
+      </div>
+      <div class="pp" data-reveal="right"><div><small>Pay in full</small><p class="big">$397</p><small>Special pay in full rate</small></div><div><small>Payment plan</small><p class="big">3 x $199</p><small>$597 total</small></div></div>
+    </div>
+    <ol class="how" data-reveal><li><strong>Apply</strong><span>Complete the short application.</span></li><li><strong>Review</strong><span>I personally review every application and email you.</span></li><li><strong>Enroll</strong><span>If approved, you'll get a link to choose your payment option.</span></li><li><strong>Begin</strong><span>Your first session is Thursday, October 22.</span></li></ol>
+    <p class="fineprint">Applying doesn't guarantee a place. Identity Reset is a coaching and educational experience, not therapy or clinical trauma treatment. Participants agree to respect one another's privacy.</p>
+  </div>
+</section>
+<section id="roadmap">
+  <div class="wrap two">
+    <div data-reveal="left"><p class="kicker">Purpose Roadmapping</p><h2>You have the vision. <em>Let's map it.</em></h2></div>
+    <div data-reveal="right"><p class="lede">You know you have gifts, ideas, or a direction to pursue, but you're not sure what to focus on first.</p><p>In one focused private session we explore your strengths, priorities, goals, and obstacles, then organize your next steps into a practical written plan.</p><div class="ctas" style="margin-top:1.6rem"><a class="btn btn-rose" href="index.html#contact">Request a session</a><a class="btn btn-line" href="https://calendly.com/jennifer-renewedsoul/15min">Book a discovery call</a></div></div>
+  </div>
+</section>
+<section id="vision" class="tint">
+  <div class="wrap vision-grid">
+    <div class="wide-photo" data-reveal="left"><img src="images/vision.jpg" alt="Jennifer working on a laptop beside her bookshelves" style="aspect-ratio:4/5;object-position:center 20%"></div>
+    <div data-reveal="right">
+      <p class="kicker">Vision Activation</p><h2>Let's bring your vision <em>to life.</em></h2>
+      <p class="lede" style="margin:1.3rem 0 1.6rem">When your next step involves building, I help you organize the details and move forward.</p>
+      <div class="rows"><div><h3>Books</h3><p>Manuscript organization, publishing preparation, and launch planning.</p></div><div><h3>Websites and brands</h3><p>Messaging, copy, design, and a brand that sounds like you.</p></div><div><h3>Business strategy</h3><p>Clear offers, pricing, priorities, and a plan you can act on.</p></div><div><h3>Launches</h3><p>Structure and momentum to take your project public.</p></div></div>
+      <div class="ctas" style="margin-top:2rem"><a class="btn btn-rose" href="index.html#contact">Discuss my project</a></div>
+    </div>
+  </div>
+</section>
+<section class="res" id="digital">
+  <div class="wrap">
+    <div data-reveal><p class="kicker">Digital resources</p><h2>Begin the work <em>on your own time.</em></h2></div>
+    <div class="res-grid">
+      <a class="prod" href="quiz.html" data-reveal><div class="cover free"><span>Free Identity Quiz</span></div><h3>Start here, free</h3><span class="price">Free</span></a>
+      <a class="prod" href="https://stan.store/renewedsoul/p/break-the-cycle-workbook-f9pijyvz" data-reveal data-delay="120"><div class="cover"><img src="book-break-the-cycle.png" alt="Break the Cycle workbook cover"></div><h3>Break the Cycle</h3><span class="price">$20</span></a>
+      <a class="prod" href="https://stan.store/renewedsoul/p/get-my-21-day-renewed-soul-journal-now" data-reveal data-delay="240"><div class="cover"><img src="book-21-day-journal.png" alt="21 Day Renewed Soul Journal cover"></div><h3>The 21 Day Journal</h3><span class="price">$27</span></a>
+      <a class="prod" href="https://stan.store/renewedsoul/p/identity-reset-workbook-tkueg3rs" data-reveal data-delay="360"><div class="cover"><img src="book-unexcavated-woman.png" alt="The Unexcavated Woman guide cover"></div><h3>The Unexcavated Woman</h3><span class="price">$47</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="name">The <em>Renewed</em> Soul</div><p class="tagline">You're not stuck. You're just unexcavated.</p><p>There's more in you than what happened to you.</p><p>Jennifer Jones | Transformation &amp; Life Purpose Coach</p></div>
+      <div><h4>Explore</h4><ul><li><a href="about.html">Meet Jennifer</a></li><li><a href="services.html">Work With Me</a></li><li><a href="services.html#cohort">Identity Reset Cohort</a></li><li><a href="speaking.html">Speaking</a></li><li><a href="quiz.html">Free Identity Quiz</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="https://www.youtube.com/channel/UCcUUK5c2Fx3Fn_vhpyp1Ylw">YouTube</a></li><li><a href="https://www.tiktok.com/@therenewedsoulcoach">TikTok</a></li><li><a href="https://www.instagram.com/therenewedsoulcoaching">Instagram</a></li><li><a href="https://www.facebook.com/renewedsoulcoaching">Facebook</a></li><li><a href="mailto:jennifer@renewedsoul.co">jennifer@renewedsoul.co</a></li></ul></div>
+    </div>
+    <div class="fine"><span>&copy; 2026 The Renewed Soul. All rights reserved.</span><span><a href="privacy.html">Privacy Policy</a> &nbsp; <a href="terms.html">Terms &amp; Conditions</a></span></div>
+    <p style="font-size:.82rem;margin-top:1rem;color:#9F8B93">Coaching and educational services are not a substitute for licensed mental health care. Individual outcomes vary.</p>
   </div>
 </footer>
 
+<dialog class="promo" id="promo" aria-labelledby="promo-t">
+  <button class="x" aria-label="Close" data-close>&times;</button>
+  <div class="promo-grid">
+    <img src="images/popup.jpg" alt="Jennifer Jones smiling in a black turtleneck">
+    <div class="promo-body">
+      <p class="kicker">The Identity Reset Cohort</p>
+      <h2 id="promo-t">Ready to rediscover <em>who you are?</em></h2>
+      <p>Five weeks of guided group coaching to recognize old identity patterns, reconnect with your voice, and move forward with greater clarity.</p>
+      <div class="promo-meta">
+        <span><strong>Thursdays, October 22 to November 19, 2026</strong></span>
+        <span>5:30 to 7:00 PM Pacific (8:30 PM Eastern)</span>
+        <span>Special pay in full rate: <strong>$397</strong></span>
+      </div>
+      <a class="btn btn-rose" href="https://forms.gle/mDTVDYQPwBwB2Vpw5" data-applied>Apply for the cohort</a>
+      <button class="later" data-close>Maybe later</button>
+      <p class="promo-note">Applications are reviewed before enrollment.</p>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="ytpop" id="youtube" aria-labelledby="yt-t">
+  <button class="x" aria-label="Close" data-close>&times;</button>
+  <div class="yt-top"><img src="logo.png" alt=""><h2 id="yt-t">The Renewed Soul on YouTube</h2><p>@RenewedSoulCoaching</p></div>
+  <ul class="yt-list">
+    <li><a href="https://www.youtube.com/@RenewedSoulCoaching/videos"><span class="pl"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><div><strong>What Are the 7 Fractured Identities?</strong><span>Two part teaching on breaking toxic cycles</span></div></a></li>
+    <li><a href="https://www.youtube.com/@RenewedSoulCoaching/videos"><span class="pl"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><div><strong>The People Pleaser Identity</strong><span>Two part series on what people pleasing is doing to you</span></div></a></li>
+    <li><a href="https://www.youtube.com/@RenewedSoulCoaching/videos"><span class="pl"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><div><strong>Performance Identity</strong><span>Why success never feels like enough</span></div></a></li>
+  </ul>
+  <div class="yt-actions"><a class="btn btn-rose" href="https://www.youtube.com/@RenewedSoulCoaching?sub_confirmation=1">Subscribe</a><a class="btn btn-line" href="https://www.youtube.com/@RenewedSoulCoaching/videos">Watch all videos</a></div>
+</dialog>
+
+<script>
+/* ===== Settings ===== */
+const POPUP_DELAY_SECONDS = 10;
+const POPUP_UNTIL = "2026-11-19";   /* the pop-up stops showing after this date */
+const FORM_ENDPOINT = "";           /* optional Formspree link so forms send without opening email */
+/* YouTube: paste a video ID (the letters after watch?v=) into any data-yt="" and it plays right on the page */
+/* ==================== */
+(function(){
+  const d=document, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  try{history.scrollRestoration='manual'}catch(e){}
+  const land=()=>{const h=location.hash&&d.getElementById(location.hash.slice(1));if(h)h.scrollIntoView({behavior:'instant'});else scrollTo({top:0,behavior:'instant'})};
+  land();addEventListener('load',()=>{land();setTimeout(land,350)});
+  requestAnimationFrame(()=>d.body.classList.add('loaded'));
+  const mb=d.querySelector('.menu'),nav=d.getElementById('mainnav');
+  mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.textContent='Menu'}));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  d.querySelectorAll('[data-reveal]').forEach(el=>{el.style.transitionDelay=(el.dataset.delay||0)+'ms';io.observe(el)});
+  d.querySelectorAll('[data-yt]').forEach(v=>{const id=v.dataset.yt;if(!id)return;v.addEventListener('click',e=>{e.preventDefault();const f=v.querySelector('.frame')||v;f.insertAdjacentHTML('beforeend','<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen title="Video"></iframe>')})});
+  const brand=d.querySelector('.brand');
+  brand.addEventListener('click',e=>{if(d.body.dataset.page==='index.html'){e.preventDefault();scrollTo({top:0,behavior:reduce?'auto':'smooth'})}});
+  const yt=d.getElementById('youtube');
+  d.querySelectorAll('[data-yt-open]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();nav.classList.remove('open');yt.showModal()}));
+  yt.querySelector('[data-close]').addEventListener('click',()=>yt.close());
+  yt.addEventListener('click',e=>{if(e.target===yt)yt.close()});
+  /* cohort pop-up */
+  const promo=d.getElementById('promo');
+  const store=(k,v)=>{try{return v===undefined?localStorage.getItem(k):localStorage.setItem(k,v)}catch(e){return null}};
+  const dismiss=()=>{promo.close();store('rs_cohort_seen',Date.now())};
+  promo.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',dismiss));
+  promo.addEventListener('cancel',()=>store('rs_cohort_seen',Date.now()));
+  promo.addEventListener('click',e=>{if(e.target===promo)dismiss()});
+  promo.querySelector('[data-applied]').addEventListener('click',()=>store('rs_cohort_seen',Date.now()));
+  let seen=null;try{seen=sessionStorage.getItem('rs_cohort_session')}catch(e){}
+  const live=new Date()<=new Date(POPUP_UNTIL+'T23:59:59')&&d.body.dataset.page!=='approved.html';
+  if(live&&!seen){let shown=false;const show=()=>{if(shown||d.querySelector('dialog[open]'))return;shown=true;try{sessionStorage.setItem('rs_cohort_session','1')}catch(e){}promo.showModal()};setTimeout(show,POPUP_DELAY_SECONDS*1000)}
+  if(reduce)return;
+  const par=[...d.querySelectorAll('[data-speed]')];
+  function tick(){const vh=innerHeight;par.forEach(el=>{const r=el.parentElement.getBoundingClientRect();const c=r.top+r.height/2-vh/2;const s=parseFloat(el.dataset.speed);el.style.transform='translate3d(0,'+(c*s).toFixed(1)+'px,0)'+(el.dataset.scale?' scale('+el.dataset.scale+')':'')});requestAnimationFrame(tick)}
+  requestAnimationFrame(tick);
+})();
+async function sendForm(f,subject){
+  const box=f.querySelector('.formmsg');
+  if([...f.querySelectorAll('[required]')].some(i=>!i.value.trim())){box.textContent='Please fill in the required fields so Jennifer can reply.';box.classList.add('show');return false}
+  if(FORM_ENDPOINT){try{const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{Accept:'application/json'},body:new FormData(f)});if(!r.ok)throw 0;f.reset();box.textContent='Thank you. Your message was sent and Jennifer will reply personally.'}catch(_){box.textContent='That did not send. Please email jennifer@renewedsoul.co directly.'}box.classList.add('show');return false}
+  const body=[...new FormData(f)].map(([k,v])=>k+': '+v).join('\n');
+  location.href='mailto:jennifer@renewedsoul.co?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);return false;
+}
+</script>
 </body>
 </html>
