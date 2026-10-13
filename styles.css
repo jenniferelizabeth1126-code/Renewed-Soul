@@ -633,3 +633,44 @@ footer h4{color:#9C7630}
 .article .related a{display:block;font-family:var(--serif);font-size:1.25rem;color:var(--ink);text-decoration:none;padding:.7rem 0;border-bottom:1px solid var(--line)}
 .article .related a:hover{color:var(--raspberry)}
 .legal h2{font-size:1.5rem;margin:2.2rem 0 .6rem}
+
+/* ===== accessibility and device fixes ===== */
+html,body{overflow-x:hidden}
+@supports(overflow:clip){html,body{overflow-x:clip}}
+@media(max-width:900px){[data-reveal="left"],[data-reveal="right"]{transform:translateY(36px)}}
+/* contrast: brand rose deepened slightly so all text passes WCAG AA */
+:root{--rose:#A8465F;--logo-rose:#A8465F}
+.hero-note small,footer h4,footer .fh,.post .cat{color:#7E5E22}
+footer .fh{margin:0 0 .8rem;font:600 .78rem var(--sans);letter-spacing:.16em;text-transform:uppercase}
+footer p[style*="9F8B93"]{color:#6B5A6E!important}
+.stars{color:#9C7630}
+.card.cohort p{color:#fff}
+.quiz-band{background:linear-gradient(135deg,#B04C6B 0%,#A8465F 55%,#8E3F62 100%)}
+.quiz-band .lede,.quiz-band .kicker{color:#fff}
+.cohort-band{background:linear-gradient(135deg,#B04C6B 0%,var(--raspberry) 50%,var(--wine) 100%)}
+.badge{color:#5E1A31}
+/* if scripts are off, nothing stays hidden */
+html:not(.js) [data-reveal],html:not(.js) .hero h1,html:not(.js) .hero .lede,html:not(.js) .hero .ctas,html:not(.js) .hero .kicker,html:not(.js) .petal-frame{opacity:1!important;transform:none!important}
+/* strong visible keyboard focus everywhere */
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #8A2846;outline-offset:3px;border-radius:6px}
+.signature a:focus-visible,.quiz-band a:focus-visible,.cohort-band a:focus-visible,.speak a:focus-visible{outline-color:#fff}
+.skip:focus{left:1rem;top:1rem;z-index:200;background:#fff;color:#8A2846;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.15)}
+/* comfortable tap targets on touch screens */
+@media(pointer:coarse){nav.main a,footer a{min-height:44px;display:inline-flex;align-items:center}.dates span,.qtags span{min-height:36px}}
+/* iPad: two column grids where four is too tight */
+@media(min-width:700px) and (max-width:1060px){.areas{grid-template-columns:repeat(2,1fr)}.ways4,.steps4,.incl4,.ident{grid-template-columns:repeat(2,1fr)}}
+.topic .n{color:var(--rose)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.article .midcta h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin:0 0 .6rem}
+.article .related h3{font:600 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin:0 0 .8rem}
+img{height:auto}
+.speak img{height:clamp(640px,60vw,780px)}
+@media(max-width:700px){.speak img{height:760px}}
+.thanks{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold-lt);border-radius:28px 28px 28px 4px;padding:clamp(1.6rem,4vw,2.6rem);box-shadow:0 30px 60px rgba(120,60,84,.12);color:var(--ink)}
+.thanks h3{font-size:clamp(1.6rem,3vw,2.2rem);margin:.2rem 0 .8rem}
+.thanks p{color:var(--muted)}
+.thanks .btn{margin-top:.6rem}
+.thanks:focus{outline:none}
+.formmsg a{color:var(--wine);font-weight:600}
+button[disabled]{opacity:.7;cursor:wait}
+.thanks .btn,.contact .thanks .btn{color:#fff!important}
