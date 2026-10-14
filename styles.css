@@ -786,3 +786,13 @@ footer .tagline{font-family:"Allura","Snell Roundhand","Apple Chancery",cursive!
 .feature-q blockquote{font-size:clamp(1.05rem,1.6vw,1.2rem);max-width:none}
 .feature-video.has-img .play{left:auto;top:auto;right:5%;bottom:8%;transform:none;width:64px;height:64px}
 .feature-video.has-img .play{right:2.5%;bottom:4%;width:54px;height:54px}
+
+/* vision activation pull quote and consulting note */
+.pullq{margin:1.6rem 0 1.8rem;padding:1.2rem 1.4rem;background:#fff;border-left:3px solid var(--band);border-radius:0 18px 18px 0;box-shadow:0 14px 30px rgba(30,33,53,.06)}
+.pullq blockquote{margin:0 0 .7rem;font-family:var(--serif);font-style:italic;font-size:1.12rem;line-height:1.5;color:var(--ink)}
+.pullq figcaption{font-weight:600;font-size:.95rem}
+.pullq figcaption span{display:block;font-weight:400;color:var(--muted);font-size:.88rem}
+#vision .feature-q{margin-top:3rem}
+.vcg-note{margin:1.8rem 0 0;padding:1.2rem 1.4rem;border:1px dashed #D9C9CE;border-radius:16px;color:var(--muted);background:rgba(255,255,255,.6)}
+.vcg-note strong{color:var(--ink)}
+.vcg-note a{color:var(--band);font-weight:600}

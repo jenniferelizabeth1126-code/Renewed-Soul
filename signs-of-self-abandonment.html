@@ -32,7 +32,7 @@
 <script>document.documentElement.classList.add("js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..700&family=Jost:wght@400;500;600&family=Allura&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261013c">
+<link rel="stylesheet" href="styles.css?v=20261013e">
 </head>
 <body data-page="signs-of-self-abandonment.html">
 <a class="skip" href="#main">Skip to main content</a>
@@ -278,7 +278,7 @@ async function sendForm(f,subject){
   const missing=[...f.querySelectorAll('[required]')].filter(i=>!i.value.trim());
   if(missing.length){box.textContent='Please fill in your name, email, and the other required fields so Jennifer can reply.';box.classList.add('show');missing[0].focus();return}
   const btn=f.querySelector('button[type=submit]');const label=btn.textContent;btn.disabled=true;btn.textContent='Sending...';
-  const data=Object.fromEntries(new FormData(f));data._subject=subject+': '+(data['Name']||'');data._template='table';data._captcha='false';
+  const data=Object.fromEntries(new FormData(f));data._subject=subject+': '+(data['Name']||'');if(String(data['Interested in']||'').indexOf('Visionaire')===0){data._cc='jennifer@visionaireconsultinggroup.com';data._subject='Visionaire Consulting Group inquiry: '+(data['Name']||'')}data._template='table';data._captcha='false';
   const done=()=>{const t=document.createElement('div');t.className='thanks';t.setAttribute('role','status');t.setAttribute('tabindex','-1');
     t.innerHTML='<p class="kicker">Message received</p><h3>Thank you, '+(data['Name']||'friend').replace(/[<>&]/g,'')+'!</h3><p>Your message was sent to Jennifer, and she will reply personally within 48 hours. Check your inbox (and your spam folder) for her reply.</p><p><a class="btn btn-rose" href="https://calendly.com/jennifer-renewedsoul/15min">Book a free discovery call</a></p>';
     f.replaceWith(t);t.focus({preventScroll:true})};
