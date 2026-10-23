@@ -796,3 +796,6 @@ footer .tagline{font-family:"Allura","Snell Roundhand","Apple Chancery",cursive!
 .vcg-note{margin:1.8rem 0 0;padding:1.2rem 1.4rem;border:1px dashed #D9C9CE;border-radius:16px;color:var(--muted);background:rgba(255,255,255,.6)}
 .vcg-note strong{color:var(--ink)}
 .vcg-note a{color:var(--band);font-weight:600}
+
+.tg-note{font-size:.95rem;margin:.2rem 0 1.4rem;opacity:.9}
+.cohort-band .tg-note{color:#EDEAF2}
